@@ -4,17 +4,21 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Cimn&#39;s blog</title>
+  <title>Cocos2d-js 判断平台的两种方法 | Cimn&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Record someting that I&apos;v learn">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Cimn's blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="cocos2d-js 是跨平台引擎，程序要在不同的平台下运行，有时就要动态地判断平台，我暂时总结出两种方法：
+1. 利用cc.sys.isNative布尔变量判断是否本地平台1234567891011121314if(cc.sys.isNative)&amp;#123;	cc.log(&quot;本地平台&quot;)；	if(cc.sys.isMobile)&amp;#123;	   	cc.log(&quot;本地移动平台&quot;)；	   i">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Cocos2d-js 判断平台的两种方法">
+<meta property="og:url" content="http://yoursite.com/2016/01/05/post-1/index.html">
 <meta property="og:site_name" content="Cimn's blog">
-<meta property="og:description" content="Record someting that I&apos;v learn">
+<meta property="og:description" content="cocos2d-js 是跨平台引擎，程序要在不同的平台下运行，有时就要动态地判断平台，我暂时总结出两种方法：
+1. 利用cc.sys.isNative布尔变量判断是否本地平台1234567891011121314if(cc.sys.isNative)&amp;#123;	cc.log(&quot;本地平台&quot;)；	if(cc.sys.isMobile)&amp;#123;	   	cc.log(&quot;本地移动平台&quot;)；	   i">
+<meta property="og:updated_time" content="2016-01-05T15:03:14.916Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Cimn's blog">
-<meta name="twitter:description" content="Record someting that I&apos;v learn">
+<meta name="twitter:title" content="Cocos2d-js 判断平台的两种方法">
+<meta name="twitter:description" content="cocos2d-js 是跨平台引擎，程序要在不同的平台下运行，有时就要动态地判断平台，我暂时总结出两种方法：
+1. 利用cc.sys.isNative布尔变量判断是否本地平台1234567891011121314if(cc.sys.isNative)&amp;#123;	cc.log(&quot;本地平台&quot;)；	if(cc.sys.isMobile)&amp;#123;	   	cc.log(&quot;本地移动平台&quot;)；	   i">
   
     <link rel="alternative" href="/atom.xml" title="Cimn&#39;s blog" type="application/atom+xml">
   
@@ -190,66 +194,7 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/01/05/hello-world/" class="article-date">
-  	<time datetime="2016-01-05T15:01:53.680Z" itemprop="datePublished">2016-01-05</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/05/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="http://hexo.io/">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick_Start"><a href="#Quick_Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create_a_new_post"><a href="#Create_a_new_post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/01/05/hello-world/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-post-1" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-post-1" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2016/01/05/post-1/" class="article-date">
@@ -265,43 +210,75 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/05/post-1/">Cocos2d-js 判断平台的两种方法</a>
+    <h1 class="article-title" itemprop="name">
+      Cocos2d-js 判断平台的两种方法
     </h1>
   
 
       </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cocos2d-js/">cocos2d-js</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
       
         <p>  cocos2d-js 是跨平台引擎，程序要在不同的平台下运行，有时就要动态地判断平台，<br>我暂时总结出两种方法：</p>
 <h2 id="1-__u5229_u7528cc-sys-isNative_u5E03_u5C14_u53D8_u91CF_u5224_u65AD_u662F_u5426_u672C_u5730_u5E73_u53F0"><a href="#1-__u5229_u7528cc-sys-isNative_u5E03_u5C14_u53D8_u91CF_u5224_u65AD_u662F_u5426_u672C_u5730_u5E73_u53F0" class="headerlink" title="1. 利用cc.sys.isNative布尔变量判断是否本地平台"></a>1. 利用<code>cc.sys.isNative</code>布尔变量判断是否本地平台</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(cc.sys.isNative)&#123;</span><br><span class="line">	cc.log(<span class="string">"本地平台"</span>)；</span><br><span class="line">	<span class="keyword">if</span>(cc.sys.isMobile)&#123;</span><br><span class="line">	   	cc.log(<span class="string">"本地移动平台"</span>)；</span><br><span class="line">	   <span class="keyword">if</span>(cc.sys.os == cc.sys.OS_ANDROID)&#123;</span><br><span class="line">			cc.log(<span class="string">"本地Android平台"</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(cc.sys.os == cc.sys.OS_IOS)&#123;</span><br><span class="line">			cc.log(<span class="string">"本平ios平台"</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">	cc.log(<span class="string">"Web 平台"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cocos2d-js/">cocos2d-js</a></li></ul>
-	</div>
+<a id="more"></a>
+<h2 id="2-__u5728main-js_u6587_u4EF6_u7684cc-game-onStart_u52A0_u5165_dump_28_29__u53EFlog_u51FA_u5E73_u53F0_u4FE1_u606F_uFF08_u9488_u5BF9_Web__u5E73_u53F0_uFF09"><a href="#2-__u5728main-js_u6587_u4EF6_u7684cc-game-onStart_u52A0_u5165_dump_28_29__u53EFlog_u51FA_u5E73_u53F0_u4FE1_u606F_uFF08_u9488_u5BF9_Web__u5E73_u53F0_uFF09" class="headerlink" title="2. 在main.js文件的cc.game.onStart加入 dump() 可log出平台信息（针对 Web 平台）"></a>2. 在<code>main.js</code>文件的<code>cc.game.onStart</code>加入 <code>dump()</code> 可log出平台信息（针对 Web 平台）</h2><h4 id="u4E0B_u9762_u6211_u4EEC_u6765_u770B_Cocos-js__u63D0_u4F9B_u7684_dump_28_29__u65B9_u6CD5_u6E90_u7801_uFF1A"><a href="#u4E0B_u9762_u6211_u4EEC_u6765_u770B_Cocos-js__u63D0_u4F9B_u7684_dump_28_29__u65B9_u6CD5_u6E90_u7801_uFF1A" class="headerlink" title="下面我们来看 Cocos-js 提供的 dump() 方法源码："></a>下面我们来看 Cocos-js 提供的 <code>dump()</code> 方法源码：</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//log出平台信息：</span></span><br><span class="line">sys.dump = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="keyword">var</span> self = <span class="keyword">this</span>;</span><br><span class="line"><span class="keyword">var</span> str = <span class="string">""</span>;</span><br><span class="line">str += <span class="string">"isMobile : "</span> + self.isMobile + <span class="string">"\r\n"</span>;    <span class="comment">//是否是移动native</span></span><br><span class="line">str += <span class="string">"language : "</span> + self.language + <span class="string">"\r\n"</span>;    <span class="comment">//语言</span></span><br><span class="line">str += <span class="string">"browserType : "</span> + self.browserType + <span class="string">"\r\n"</span>;    <span class="comment">//浏览器</span></span><br><span class="line">str += <span class="string">"capabilities : "</span> + <span class="built_in">JSON</span>.stringify(self.capabilities) + <span class="string">"\r\n"</span>;    <span class="comment">//性能：是否支持WebGL</span></span><br><span class="line">str += <span class="string">"os : "</span> + self.os + <span class="string">"\r\n"</span>;    <span class="comment">//系统</span></span><br><span class="line">str += <span class="string">"platform : "</span> + self.platform + <span class="string">"\r\n"</span>;</span><br><span class="line">cc.log(str);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="u8FD0_u884C_u7ED3_u679C_u5982_u4E0B_uFF1A"><a href="#u8FD0_u884C_u7ED3_u679C_u5982_u4E0B_uFF1A" class="headerlink" title="运行结果如下："></a>运行结果如下：</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Cocos2d-JS v3<span class="number">.0</span> RC3 </span><br><span class="line">isMobile : <span class="literal">false</span></span><br><span class="line">language : zh</span><br><span class="line">browserType : chrome</span><br><span class="line">capabilities : &#123;<span class="string">"canvas"</span>:<span class="literal">true</span>,<span class="string">"mouse"</span>:<span class="literal">true</span>,<span class="string">"keyboard"</span>:<span class="literal">true</span>,<span class="string">"accelerometer"</span>:<span class="literal">true</span>&#125;</span><br><span class="line">os : Windows</span><br><span class="line">platform : <span class="number">101</span></span><br></pre></td></tr></table></figure>
+<p>从上面log的信息可以知道 <code>dump()</code> 方法可判断出引擎的版本、是否在移动平台、语言、输入设备和运行的系统环境等。</p>
 
       
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/01/05/post-1/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
     </div>
     
   </div>
   
+    
+<nav id="article-nav">
+  
+    <a href="/2016/01/05/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
 </article>
 
 
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
 
 
@@ -309,8 +286,7 @@
 
 
 
-  
-  
+
 </div>
       <footer id="footer">
   <div class="outer">
@@ -334,8 +310,8 @@
 		fancybox: true,
 		mathjax: true,
 		animate: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
