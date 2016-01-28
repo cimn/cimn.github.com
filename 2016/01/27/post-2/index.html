@@ -12,7 +12,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/01/27/post-2/index.html">
 <meta property="og:site_name" content="Cimn's blog">
 <meta property="og:description" content="现在的模块化开发在前端来说非常热门，cocos2d-js对于开发HTML5游戏的前端来说，cocos2d-js由于是采用JavaScript脚本，而JS的语法层次缺乏模块化编程支持，在使用cocos2d-js引擎开发中大型游戏项目需要的是一种更有效，更简单的方法进行模块化编程，而不仅仅是让project.json中的jsList中配置的js文件一个一个按顺序执行。如能学习同门语言的node.js的">
-<meta property="og:updated_time" content="2016-01-27T12:33:51.647Z">
+<meta property="og:updated_time" content="2016-01-28T02:09:20.529Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Cocos2d-js模块化开发的解决方案">
 <meta name="twitter:description" content="现在的模块化开发在前端来说非常热门，cocos2d-js对于开发HTML5游戏的前端来说，cocos2d-js由于是采用JavaScript脚本，而JS的语法层次缺乏模块化编程支持，在使用cocos2d-js引擎开发中大型游戏项目需要的是一种更有效，更简单的方法进行模块化编程，而不仅仅是让project.json中的jsList中配置的js文件一个一个按顺序执行。如能学习同门语言的node.js的">
@@ -236,6 +236,21 @@
 <li>用Grunt/Gulp/Webpack等对引擎进行模块打包。</li>
 </ol>
 <p>这样做有什么好处？利用node.js的工作流，能大大加速cocos2d-js的开发调试速度。cocos2d-js在HTML5游戏方面工具链相比Erget是有先天性不足，我们暂不讨论，先来看看以上这两步具体是怎么做的：<br><a id="more"></a></p>
+<ol>
+<li><p>Cocos2d-js Module解决方案：Module可以让项目如C++的#include、Lua的require等语法那样加载其他文件/模块的内容；<br>  具体三个模块分别如下：</p>
+<ul>
+<li>load(name,func)           </li>
+</ul>
+<h3 id="name_u53C2_u6570_uFF1A_u6A21_u5757_u7684_u540D_u5B57_3B_func_u53C2_u6570_uFF1A_u56DE_u8C03_u51FD_u6570"><a href="#name_u53C2_u6570_uFF1A_u6A21_u5757_u7684_u540D_u5B57_3B_func_u53C2_u6570_uFF1A_u56DE_u8C03_u51FD_u6570" class="headerlink" title="name参数：模块的名字;    func参数：回调函数"></a><code>name</code>参数：模块的名字;    <code>func</code>参数：回调函数</h3> <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">    <span class="comment">// Example  </span></span><br><span class="line">load(<span class="string">"GameScene"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;  </span><br><span class="line">    <span class="keyword">var</span> GameScene = cc.Scene.extend(&#123;&#125;);  </span><br><span class="line">      </span><br><span class="line">    <span class="keyword">return</span> GameScene;   <span class="comment">// return the module  </span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>include(name)                </li>
+</ul>
+<h3 id="u83B7_u53D6_u4E00_u4E2A_u6A21_u5757_uFF0Cname_u662F_u8BE5_u6A21_u5757_u7684_u540D_u5B57"><a href="#u83B7_u53D6_u4E00_u4E2A_u6A21_u5757_uFF0Cname_u662F_u8BE5_u6A21_u5757_u7684_u540D_u5B57" class="headerlink" title="获取一个模块，name是该模块的名字"></a>获取一个模块，<code>name</code>是该模块的名字</h3> <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Example  </span></span><br><span class="line"><span class="keyword">var</span> GameScene = include(<span class="string">"GameScene"</span>)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>dumpModuleInfo()</li>
+</ul>
+</li>
+</ol>
 
       
     </div>
