@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>cocos2d-js + cocos ide + cocostudio 环境的快速搭建 | Cimn&#39;s blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="一说到cocos2dx环境搭建，首先就应立刻想起两个必备语言环境，JDK和Pyhton!
+经典版本JDK 1.7+ ，这里是安装教程与环境变量配置;
+经典Python 2.7+ ， 这里是下载地址；
+
+
+这里比较重要的一步是Python环境变量的配置：“环境变量”选项卡中在“系统变量”的“Path”中添砖加入Python路径！
+在cmd控制台下输入python命令，如成功即出现版本号。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="cocos2d-js + cocos ide + cocostudio 环境的快速搭建">
+<meta property="og:url" content="http://yoursite.com/2016/03/05/post-3/index.html">
+<meta property="og:site_name" content="Cimn's blog">
+<meta property="og:description" content="一说到cocos2dx环境搭建，首先就应立刻想起两个必备语言环境，JDK和Pyhton!
+经典版本JDK 1.7+ ，这里是安装教程与环境变量配置;
+经典Python 2.7+ ， 这里是下载地址；
+
+
+这里比较重要的一步是Python环境变量的配置：“环境变量”选项卡中在“系统变量”的“Path”中添砖加入Python路径！
+在cmd控制台下输入python命令，如成功即出现版本号。">
+<meta property="og:updated_time" content="2016-03-04T18:18:13.609Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="cocos2d-js + cocos ide + cocostudio 环境的快速搭建">
+<meta name="twitter:description" content="一说到cocos2dx环境搭建，首先就应立刻想起两个必备语言环境，JDK和Pyhton!
+经典版本JDK 1.7+ ，这里是安装教程与环境变量配置;
+经典Python 2.7+ ， 这里是下载地址；
+
+
+这里比较重要的一步是Python环境变量的配置：“环境变量”选项卡中在“系统变量”的“Path”中添砖加入Python路径！
+在cmd控制台下输入python命令，如成功即出现版本号。">
+  
+    <link rel="alternative" href="/atom.xml" title="Cimn&#39;s blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/img/meicon.png" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">cimn_HJ</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">Record someting that I&#39;v learn</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/cimn" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/huangjin2008" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_blank" href="/#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="/#" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/cocos2d-js/" style="font-size: 10px;">cocos2d-js</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://dexsinis.github.io/">DexSinis的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://mazzy.cn/">Mazzy&#39;s小阁</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">游戏爱好者，IT狗</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">cimn_HJ</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="/img/meicon.png" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">cimn_HJ</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">Record someting that I&#39;v learn</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/cimn" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/huangjin2008" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="/#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="/#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-post-3" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/05/post-3/" class="article-date">
+  	<time datetime="2016-03-04T17:20:39.000Z" itemprop="datePublished">2016-03-05</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      cocos2d-js + cocos ide + cocostudio 环境的快速搭建
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cocos2d-js/">cocos2d-js</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="u4E00_u8BF4_u5230cocos2dx_u73AF_u5883_u642D_u5EFA_uFF0C_u9996_u5148_u5C31_u5E94_u7ACB_u523B_u60F3_u8D77_u4E24_u4E2A_u5FC5_u5907_u8BED_u8A00_u73AF_u5883_uFF0CJDK_u548CPyhton_21"><a href="#u4E00_u8BF4_u5230cocos2dx_u73AF_u5883_u642D_u5EFA_uFF0C_u9996_u5148_u5C31_u5E94_u7ACB_u523B_u60F3_u8D77_u4E24_u4E2A_u5FC5_u5907_u8BED_u8A00_u73AF_u5883_uFF0CJDK_u548CPyhton_21" class="headerlink" title="一说到cocos2dx环境搭建，首先就应立刻想起两个必备语言环境，JDK和Pyhton!"></a>一说到cocos2dx环境搭建，首先就应立刻想起两个必备语言环境，JDK和Pyhton!</h3><ol>
+<li>经典版本JDK 1.7+ ，这里是<a href="http://jingyan.baidu.com/article/6dad5075d1dc40a123e36ea3.html" target="_blank" rel="external">安装教程与环境变量配置</a>;</li>
+<li>经典Python 2.7+ ， 这里是<a href="https://www.python.org/downloads/" target="_blank" rel="external">下载地址</a>；</li>
+</ol>
+<ul>
+<li>这里比较重要的一步是Python环境变量的配置：“环境变量”选项卡中在“系统变量”的“Path”中添砖加入Python路径！</li>
+<li>在cmd控制台下输入<code>python</code>命令，如成功即出现版本号。</li>
+</ul>
+<a id="more"></a>
+<h3 id="u7B2C_u4E8C_u6B65_u8FDB_u884C_u51C6_u5907_u7684_u5DE5_u4F5C_u662F_u4EC0_u4E48_u5462_uFF1F_u6CA1_u9519_uFF0C_u5C31_u662F_u6253_u5305_u7ECF_u5178_u4E09_u4EF6_u5957_3A_SDK_+_NDK_r9d_+_ANT_1-9__2C_u8FD9_u91CC_u7684_u7248_u672C_u8BF4_u7684_u662F_u6700_u4F4E_u7248_uFF0C_u53EA_u80FD_u5411_u4E0A_u517C_u5BB9_u54E6_7E"><a href="#u7B2C_u4E8C_u6B65_u8FDB_u884C_u51C6_u5907_u7684_u5DE5_u4F5C_u662F_u4EC0_u4E48_u5462_uFF1F_u6CA1_u9519_uFF0C_u5C31_u662F_u6253_u5305_u7ECF_u5178_u4E09_u4EF6_u5957_3A_SDK_+_NDK_r9d_+_ANT_1-9__2C_u8FD9_u91CC_u7684_u7248_u672C_u8BF4_u7684_u662F_u6700_u4F4E_u7248_uFF0C_u53EA_u80FD_u5411_u4E0A_u517C_u5BB9_u54E6_7E" class="headerlink" title="第二步进行准备的工作是什么呢？没错，就是打包经典三件套: SDK + NDK r9d + ANT 1.9 ,这里的版本说的是最低版，只能向上兼容哦~"></a>第二步进行准备的工作是什么呢？没错，就是打包经典三件套: SDK + NDK r9d + ANT 1.9 ,这里的版本说的是最低版，只能向上兼容哦~</h3><p>操作的方法是什么呢？最方便的是打开cocos2d-js根本录下的Python脚本<code>setup.py</code>,双击运行再把三件套路径依次输入，例如：<code>D:\u0u0\sdk</code>；<code>D:\u0u0\android-ndk</code>；<code>D:\u0u0\ant\bin</code>。</p>
+<h3 id="u73B0_u5728_uFF0C_u6211_u4EEC_u79BB_u6210_u529F_u53EA_u5DEE_u4E00_u6B65_uFF01_u5B89_u88C5cocos_ide_u4E0Ecocostudio_uFF0C_u76F8_u4FE1_u8FD9_u5982_u5E73_u65F6_u88C5_u6E38_u620F_u4E00_u6837_u7684_u64CD_u4F5C_u53EF_u662F_u8DEF_u4EBA_u7686_u77E5_u54AF_7E"><a href="#u73B0_u5728_uFF0C_u6211_u4EEC_u79BB_u6210_u529F_u53EA_u5DEE_u4E00_u6B65_uFF01_u5B89_u88C5cocos_ide_u4E0Ecocostudio_uFF0C_u76F8_u4FE1_u8FD9_u5982_u5E73_u65F6_u88C5_u6E38_u620F_u4E00_u6837_u7684_u64CD_u4F5C_u53EF_u662F_u8DEF_u4EBA_u7686_u77E5_u54AF_7E" class="headerlink" title="现在，我们离成功只差一步！安装cocos ide与cocostudio，相信这如平时装游戏一样的操作可是路人皆知咯~"></a>现在，我们离成功只差一步！安装cocos ide与cocostudio，相信这如平时装游戏一样的操作可是路人皆知咯~</h3><p>再细说下cocos ide打开后的操作，cocos ide首先运行时，须把cocos2d工作台，也就是cocos2d-js的路径选中加载，到此，整个环境搞定！</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/01/27/post-2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Cocos2d-js模块化开发的解决方案</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 cimn_HJ
+    	</div>
+      	<div class="footer-right">
+      		power by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
