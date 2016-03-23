@@ -4,24 +4,27 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>cocostudio 1.6 填坑之旅 | Cimn&#39;s blog</title>
+  <title>cocostudio 1.6 填坑小记 | Cimn&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="话说cocos官方在过年之际新出了cocos creator测试版,现在什么年代，还cocostudio 1.6？！在此暂不说，说说cocostudio1..6众所周知的锚点不齐bug！
 但是，有bug总有解决的方法，我的办法就是取到当前对象的大小，你锚点不正对吧，我自已来！方法如下：
-1var object = ccui.">
+
+首先，还是先说一说cocostudio在cocos-js中的加载方式：1ctor:function()&amp;#12">
 <meta property="og:type" content="article">
-<meta property="og:title" content="cocostudio 1.6 填坑之旅">
+<meta property="og:title" content="cocostudio 1.6 填坑小记">
 <meta property="og:url" content="http://yoursite.com/2016/03/16/post-4/index.html">
 <meta property="og:site_name" content="Cimn's blog">
 <meta property="og:description" content="话说cocos官方在过年之际新出了cocos creator测试版,现在什么年代，还cocostudio 1.6？！在此暂不说，说说cocostudio1..6众所周知的锚点不齐bug！
 但是，有bug总有解决的方法，我的办法就是取到当前对象的大小，你锚点不正对吧，我自已来！方法如下：
-1var object = ccui.">
-<meta property="og:updated_time" content="2016-03-16T14:36:14.867Z">
+
+首先，还是先说一说cocostudio在cocos-js中的加载方式：1ctor:function()&amp;#12">
+<meta property="og:updated_time" content="2016-03-23T18:07:04.834Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="cocostudio 1.6 填坑之旅">
+<meta name="twitter:title" content="cocostudio 1.6 填坑小记">
 <meta name="twitter:description" content="话说cocos官方在过年之际新出了cocos creator测试版,现在什么年代，还cocostudio 1.6？！在此暂不说，说说cocostudio1..6众所周知的锚点不齐bug！
 但是，有bug总有解决的方法，我的办法就是取到当前对象的大小，你锚点不正对吧，我自已来！方法如下：
-1var object = ccui.">
+
+首先，还是先说一说cocostudio在cocos-js中的加载方式：1ctor:function()&amp;#12">
   
     <link rel="alternative" href="/atom.xml" title="Cimn&#39;s blog" type="application/atom+xml">
   
@@ -216,7 +219,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      cocostudio 1.6 填坑之旅
+      cocostudio 1.6 填坑小记
     </h1>
   
 
@@ -238,7 +241,24 @@
       
         <pre><code>话说cocos官方在过年之际新出了cocos creator测试版,现在什么年代，还cocostudio 1.6？！在此暂不说，说说cocostudio1..6众所周知的锚点不齐bug！
 </code></pre><p>但是，有bug总有解决的方法，我的办法就是取到当前对象的大小，你锚点不正对吧，我自已来！方法如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var object = ccui.</span><br></pre></td></tr></table></figure>
+<ol>
+<li>首先，还是先说一说cocostudio在cocos-js中的加载方式：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ctor:function()&#123;&#10;&#9;this._super();&#10;&#9;&#9;this._root = ccs.uiReader.widgetFromJsonFile(FynnJsonPath+&#34;NewFynnLobby.json&#34;);//&#21152;&#36733;json&#25991;&#20214;&#65292;cocostudio&#23548;&#20986;&#30340;UI&#25991;&#20214;&#10;&#9;&#9;this._root.setContentSize(cc.winSize);&#10;&#9;&#9;this.addChild(this._root);&#10;&#9;&#9;//&#21462;&#23376;&#33410;&#28857;&#19979;&#20803;&#32032;&#26041;&#27861;&#10;&#9;&#9;this._bg = ccui.helper.seekWidgetByName(this._root,&#34;bg_all&#34;);//BG&#9;&#9;&#10;&#9;&#9;this._doustar = ccui.helper.seekWidgetByName(this._root,&#34;_ico_ledou&#34;);//doustar&#10;&#9;&#9;this._jinbistar = ccui.helper.seekWidgetByName(this._root,&#34;_ico_jinbi&#34;);//_ico_jinbi&#10;&#9;&#9;this._star = ccui.helper.seekWidgetByName(this._root,&#34;_btn_enterico_1&#34;);//_btn_enterico</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<a id="more"></a>
+<ol>
+<li>接下来如果有一个需求是这样的，我需要在<code>_ico_jinbi</code>上添加一个动画效果，这就需要完全覆盖这个icon，这就需要对正锚点，可cocostudio锚点很有问题，<br>没关系，可以这样做：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">//cocostudio&#21160;&#30011;&#21152;&#36733;&#26041;&#27861;&#10;ccs.armatureDataManager.addArmatureFileInfo(FynnFlashPath + &#34;xxx.ExportJson&#34;);&#10;       var _armature = new ccs.Armature(&#34;xxxbutton&#34;);&#10;       _armature.getAnimation().play(&#34;startlight&#34;,-1,1);//1 loop play, 0 play once&#10;       this._jinbistar.addChild(_armature, 0);&#10;       _armature.x = _armature.x + this._jinbistar.getContentSize().width / 2;//&#26041;&#27861;&#30340;&#20851;&#38190;&#22312;&#20110;&#29992;getContentSize()&#33719;&#21462;&#23376;&#33410;&#28857;&#24403;&#21069;&#23545;&#35937;&#22823;&#23567;&#10;       _armature.y = _armature.y + this._jinbistar.getContentSize().height / 2;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<hr>
+<pre><code>当然，cocostudio的动画加载上面有提到，现在具体也记录下：
+对于ExportJson动画文件的加载，其中如果美术只给你这个文件的话，要如何得知其文件中各骨骼动画的名称呢？步骤如下：
+</code></pre><ol>
+<li>用文本编辑出版（如Nodepad++）打开ExportJson文件；</li>
+<li>按ctrl + F 调出搜索框，<br>-关键词<code>&quot;mov_bone_data&quot;</code>得到Armature().name，也就是动画标签名，在 armature_data上面得到，用于play()。<br>-关键词<code>&quot;mov_data&quot;</code>得到的是Armature，用于cc.Armature()。</li>
+</ol>
+<p>###这全是踩坑踩出来的小心得，不用谢，请拿走，希君有用！哈哈~~~</p>
+
       
     </div>
     
