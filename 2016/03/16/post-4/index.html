@@ -16,7 +16,7 @@
 <meta property="og:description" content="话说cocos官方在过年之际新出了cocos creator测试版,现在什么年代，还cocostudio 1.6？！在此暂不说，说说cocostudio1..6众所周知的锚点不齐bug！但是，有bug总有解决的方法，我的办法就是取到当前对象的大小，你锚点不正对吧，我自已来！方法如下：
 
 首先，还是先说一说cocostudio在cocos-js中的加载方式：1ctor:function()&amp;#123">
-<meta property="og:updated_time" content="2016-03-23T18:10:16.508Z">
+<meta property="og:updated_time" content="2016-03-23T18:11:47.221Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="cocostudio 1.6 填坑小记">
 <meta name="twitter:description" content="话说cocos官方在过年之际新出了cocos creator测试版,现在什么年代，还cocostudio 1.6？！在此暂不说，说说cocostudio1..6众所周知的锚点不齐bug！但是，有bug总有解决的方法，我的办法就是取到当前对象的大小，你锚点不正对吧，我自已来！方法如下：
@@ -238,7 +238,7 @@
       
         <h5 id="u8BDD_u8BF4cocos_u5B98_u65B9_u5728_u8FC7_u5E74_u4E4B_u9645_u65B0_u51FA_u4E86cocos_creator_u6D4B_u8BD5_u7248_2C_u73B0_u5728_u4EC0_u4E48_u5E74_u4EE3_uFF0C_u8FD8cocostudio_1-6_uFF1F_uFF01_u5728_u6B64_u6682_u4E0D_u8BF4_uFF0C_u8BF4_u8BF4cocostudio1-6_u4F17_u6240_u5468_u77E5_u7684_u951A_u70B9_u4E0D_u9F50bug_uFF01"><a href="#u8BDD_u8BF4cocos_u5B98_u65B9_u5728_u8FC7_u5E74_u4E4B_u9645_u65B0_u51FA_u4E86cocos_creator_u6D4B_u8BD5_u7248_2C_u73B0_u5728_u4EC0_u4E48_u5E74_u4EE3_uFF0C_u8FD8cocostudio_1-6_uFF1F_uFF01_u5728_u6B64_u6682_u4E0D_u8BF4_uFF0C_u8BF4_u8BF4cocostudio1-6_u4F17_u6240_u5468_u77E5_u7684_u951A_u70B9_u4E0D_u9F50bug_uFF01" class="headerlink" title="话说cocos官方在过年之际新出了cocos creator测试版,现在什么年代，还cocostudio 1.6？！在此暂不说，说说cocostudio1..6众所周知的锚点不齐bug！"></a>话说cocos官方在过年之际新出了cocos creator测试版,现在什么年代，还cocostudio 1.6？！在此暂不说，说说cocostudio1..6众所周知的锚点不齐bug！</h5><p>但是，有bug总有解决的方法，我的办法就是取到当前对象的大小，你锚点不正对吧，我自已来！方法如下：</p>
 <ol>
-<li>首先，还是先说一说cocostudio在cocos-js中的加载方式：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ctor:function()&#123;&#10;&#9;this._super();&#10;&#9;&#9;this._root = ccs.uiReader.widgetFromJsonFile(FynnJsonPath+&#34;NewFynnLobby.json&#34;);//&#21152;&#36733;json&#25991;&#20214;&#65292;cocostudio&#23548;&#20986;&#30340;UI&#25991;&#20214;&#10;&#9;&#9;this._root.setContentSize(cc.winSize);&#10;&#9;&#9;this.addChild(this._root);&#10;&#9;&#9;//&#21462;&#23376;&#33410;&#28857;&#19979;&#20803;&#32032;&#26041;&#27861;&#10;&#9;&#9;this._bg = ccui.helper.seekWidgetByName(this._root,&#34;bg_all&#34;);//BG&#9;&#9;&#10;&#9;&#9;this._doustar = ccui.helper.seekWidgetByName(this._root,&#34;_ico_ledou&#34;);//doustar&#10;&#9;&#9;this._jinbistar = ccui.helper.seekWidgetByName(this._root,&#34;_ico_jinbi&#34;);//_ico_jinbi&#10;&#9;&#9;this._star = ccui.helper.seekWidgetByName(this._root,&#34;_btn_enterico_1&#34;);//_btn_enterico</span><br></pre></td></tr></table></figure>
+<li>首先，还是先说一说cocostudio在cocos-js中的加载方式：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ctor:function()&#123;&#10;&#9;this._super();&#10;&#9;&#9;this._root = ccs.uiReader.widgetFromJsonFile(FynnJsonPath+&#34;NewFynnLobby.json&#34;);//&#21152;&#36733;json&#25991;&#20214;&#65292;cocostudio&#23548;&#20986;&#30340;UI&#25991;&#20214;&#10;&#9;&#9;this._root.setContentSize(cc.winSize);&#10;&#9;&#9;this.addChild(this._root);&#10;&#10;&#9;&#9;//&#21462;&#23376;&#33410;&#28857;&#19979;&#20803;&#32032;&#26041;&#27861;&#10;&#9;&#9;this._bg = ccui.helper.seekWidgetByName(this._root,&#34;bg_all&#34;);//BG&#9;&#9;&#10;&#9;&#9;this._doustar = ccui.helper.seekWidgetByName(this._root,&#34;_ico_ledou&#34;);//doustar&#10;&#9;&#9;this._jinbistar = ccui.helper.seekWidgetByName(this._root,&#34;_ico_jinbi&#34;);//_ico_jinbi&#10;&#9;&#9;this._star = ccui.helper.seekWidgetByName(this._root,&#34;_btn_enterico_1&#34;);//_btn_enterico</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <a id="more"></a>
@@ -251,8 +251,7 @@
 <li>用文本编辑出版（如Nodepad++）打开ExportJson文件；</li>
 <li>按ctrl + F 调出搜索框，<br>-关键词<code>&quot;mov_bone_data&quot;</code>得到Armature().name，也就是动画标签名，在 armature_data上面得到，用于play()。<br>-关键词<code>&quot;mov_data&quot;</code>得到的是Armature，用于cc.Armature()。</li>
 </ol>
-<p>###这全是踩坑踩出来的小心得，不用谢，请拿走，希君有用！哈哈~~~</p>
-
+<h3 id="u8FD9_u5168_u662F_u8E29_u5751_u8E29_u51FA_u6765_u7684_u5C0F_u5FC3_u5F97_uFF0C_u4E0D_u7528_u8C22_uFF0C_u8BF7_u62FF_u8D70_uFF0C_u5E0C_u541B_u6709_u7528_uFF01_u54C8_u54C8_7E_7E_7E"><a href="#u8FD9_u5168_u662F_u8E29_u5751_u8E29_u51FA_u6765_u7684_u5C0F_u5FC3_u5F97_uFF0C_u4E0D_u7528_u8C22_uFF0C_u8BF7_u62FF_u8D70_uFF0C_u5E0C_u541B_u6709_u7528_uFF01_u54C8_u54C8_7E_7E_7E" class="headerlink" title="这全是踩坑踩出来的小心得，不用谢，请拿走，希君有用！哈哈~~~"></a>这全是踩坑踩出来的小心得，不用谢，请拿走，希君有用！哈哈~~~</h3>
       
     </div>
     
