@@ -4,36 +4,24 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>cocos2d-js + cocos ide + cocostudio 环境的快速搭建 | Cimn&#39;s blog</title>
+  <title>说说Javascript的bind() | Cimn&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一说到cocos2dx环境搭建，首先就应立刻想起两个必备语言环境，JDK和Pyhton!
-经典版本JDK 1.7+ ，这里是安装教程与环境变量配置;
-经典Python 2.7+ ， 这里是下载地址；
-
-
-这里比较重要的一步是Python环境变量的配置：“环境变量”选项卡中在“系统变量”的“Path”中添加入Python路径！
-在cmd控制台下输入python命令，如成功即出现版本号。">
+  <meta name="description" content="我们都知道，对于Javascript的运行时this来说，函数进回调之前一定要保存this,通常的做法如下:1var _that = this;	//用一个局部变量保存this的值再进放回调callback
+本来通常情况下处理函数都要用一层匿名函数包裹一下，才能维持处理函数本身的this.也可以直接通过.bind(logger)人为的将其执行时的this指向logger对象。
+而且有个比较好用说起">
 <meta property="og:type" content="article">
-<meta property="og:title" content="cocos2d-js + cocos ide + cocostudio 环境的快速搭建">
-<meta property="og:url" content="http://yoursite.com/2016/03/05/post-3/index.html">
+<meta property="og:title" content="说说Javascript的bind()">
+<meta property="og:url" content="http://yoursite.com/2016/04/14/post-5/index.html">
 <meta property="og:site_name" content="Cimn's blog">
-<meta property="og:description" content="一说到cocos2dx环境搭建，首先就应立刻想起两个必备语言环境，JDK和Pyhton!
-经典版本JDK 1.7+ ，这里是安装教程与环境变量配置;
-经典Python 2.7+ ， 这里是下载地址；
-
-
-这里比较重要的一步是Python环境变量的配置：“环境变量”选项卡中在“系统变量”的“Path”中添加入Python路径！
-在cmd控制台下输入python命令，如成功即出现版本号。">
-<meta property="og:updated_time" content="2016-03-16T14:35:59.113Z">
+<meta property="og:description" content="我们都知道，对于Javascript的运行时this来说，函数进回调之前一定要保存this,通常的做法如下:1var _that = this;	//用一个局部变量保存this的值再进放回调callback
+本来通常情况下处理函数都要用一层匿名函数包裹一下，才能维持处理函数本身的this.也可以直接通过.bind(logger)人为的将其执行时的this指向logger对象。
+而且有个比较好用说起">
+<meta property="og:updated_time" content="2016-04-13T17:35:14.858Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="cocos2d-js + cocos ide + cocostudio 环境的快速搭建">
-<meta name="twitter:description" content="一说到cocos2dx环境搭建，首先就应立刻想起两个必备语言环境，JDK和Pyhton!
-经典版本JDK 1.7+ ，这里是安装教程与环境变量配置;
-经典Python 2.7+ ， 这里是下载地址；
-
-
-这里比较重要的一步是Python环境变量的配置：“环境变量”选项卡中在“系统变量”的“Path”中添加入Python路径！
-在cmd控制台下输入python命令，如成功即出现版本号。">
+<meta name="twitter:title" content="说说Javascript的bind()">
+<meta name="twitter:description" content="我们都知道，对于Javascript的运行时this来说，函数进回调之前一定要保存this,通常的做法如下:1var _that = this;	//用一个局部变量保存this的值再进放回调callback
+本来通常情况下处理函数都要用一层匿名函数包裹一下，才能维持处理函数本身的this.也可以直接通过.bind(logger)人为的将其执行时的this指向logger对象。
+而且有个比较好用说起">
   
     <link rel="alternative" href="/atom.xml" title="Cimn&#39;s blog" type="application/atom+xml">
   
@@ -211,11 +199,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-post-3" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-post-5" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/03/05/post-3/" class="article-date">
-  	<time datetime="2016-03-04T17:20:39.000Z" itemprop="datePublished">2016-03-05</time>
+      <a href="/2016/04/14/post-5/" class="article-date">
+  	<time datetime="2016-04-14T07:07:06.000Z" itemprop="datePublished">2016-04-14</time>
 </a>
     </div>
   
@@ -228,7 +216,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      cocos2d-js + cocos ide + cocostudio 环境的快速搭建
+      说说Javascript的bind()
     </h1>
   
 
@@ -237,7 +225,7 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cocos2d-js/">cocos2d-js</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/">nodejs</a></li></ul>
 	</div>
 
         
@@ -248,17 +236,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="u4E00_u8BF4_u5230cocos2dx_u73AF_u5883_u642D_u5EFA_uFF0C_u9996_u5148_u5C31_u5E94_u7ACB_u523B_u60F3_u8D77_u4E24_u4E2A_u5FC5_u5907_u8BED_u8A00_u73AF_u5883_uFF0CJDK_u548CPyhton_21"><a href="#u4E00_u8BF4_u5230cocos2dx_u73AF_u5883_u642D_u5EFA_uFF0C_u9996_u5148_u5C31_u5E94_u7ACB_u523B_u60F3_u8D77_u4E24_u4E2A_u5FC5_u5907_u8BED_u8A00_u73AF_u5883_uFF0CJDK_u548CPyhton_21" class="headerlink" title="一说到cocos2dx环境搭建，首先就应立刻想起两个必备语言环境，JDK和Pyhton!"></a>一说到cocos2dx环境搭建，首先就应立刻想起两个必备语言环境，JDK和Pyhton!</h3><ol>
-<li>经典版本JDK 1.7+ ，这里是<a href="http://jingyan.baidu.com/article/6dad5075d1dc40a123e36ea3.html" target="_blank" rel="external">安装教程与环境变量配置</a>;</li>
-<li>经典Python 2.7+ ， 这里是<a href="https://www.python.org/downloads/" target="_blank" rel="external">下载地址</a>；</li>
-</ol>
-<ul>
-<li>这里比较重要的一步是Python环境变量的配置：“环境变量”选项卡中在“系统变量”的“Path”中添加入Python路径！</li>
-<li>在cmd控制台下输入<code>python</code>命令，如成功即出现版本号。</li>
-</ul>
+        <p>   我们都知道，对于Javascript的运行时<code>this</code>来说，函数进回调之前一定要保存<code>this</code>,通常的做法如下:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> _that = <span class="keyword">this</span>;	<span class="comment">//用一个局部变量保存this的值再进放回调callback</span></span><br></pre></td></tr></table></figure></p>
+<p>本来通常情况下处理函数都要用一层匿名函数包裹一下，才能维持处理函数本身的this.也可以直接通过.bind(logger)人为的将其执行时的this指向logger对象。</p>
+<p>而且有个比较好用说起来又复杂的情况是与函数的闭包一起使用，例子是我用cocosjs写的一段代码，如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//闭包嵌套</span></span><br><span class="line">  ccs.armatureDataManager.addArmatureFileInfo(FynnFlashPath + <span class="string">"songli.ExportJson"</span>);</span><br><span class="line">            <span class="keyword">var</span> temp = <span class="keyword">new</span> <span class="built_in">Array</span>();</span><br><span class="line">            <span class="keyword">this</span>._armature = <span class="keyword">new</span> ccs.Armature(<span class="string">"songli"</span>);</span><br><span class="line">            <span class="keyword">this</span>._armature.getAnimation().play(<span class="string">"songli"</span>,-<span class="number">1</span>,<span class="number">0</span>);</span><br><span class="line">            <span class="keyword">this</span>._armature.x = cc.winSize.width / <span class="number">2</span>;</span><br><span class="line">            <span class="keyword">this</span>._armature.y = cc.winSize.height / <span class="number">2</span>;</span><br><span class="line">            temp.push(<span class="keyword">this</span>._armature);</span><br><span class="line">            <span class="keyword">this</span>._armature.getAnimation().setMovementEventCallFunc(<span class="function"><span class="keyword">function</span>(<span class="params">armature, movementType, movementID</span>) </span>&#123;</span><br><span class="line">                <span class="keyword">if</span> (movementType == ccs.MovementEventType.complete) &#123;</span><br><span class="line">                        <span class="keyword">var</span> toBig = cc.scaleTo(<span class="number">0.2</span>,<span class="number">1.2</span>);</span><br><span class="line">                        <span class="keyword">var</span> toSmall = cc.scaleTo(<span class="number">0.2</span>, <span class="number">0</span>);</span><br><span class="line">                        <span class="keyword">var</span> toFade = cc.fadeOut(<span class="number">0.2</span>);</span><br><span class="line">                        <span class="keyword">var</span> spawn = cc.spawn(toSmall,toFade);                        </span><br><span class="line">                        <span class="keyword">var</span> seqScale = cc.sequence(toBig,spawn,cc.callFunc(<span class="function"><span class="keyword">function</span>(<span class="params">selectorTarget</span>)</span>&#123;</span><br><span class="line">                            <span class="keyword">if</span>(temp!=<span class="literal">null</span>)&#123;</span><br><span class="line">                                temp[<span class="number">0</span>].removeFromParent(<span class="literal">true</span>);</span><br><span class="line">                                cc.log(<span class="string">"动画Release!"</span>)</span><br><span class="line">                            &#125;</span><br><span class="line">                        &#125;, temp));</span><br><span class="line">                        temp[<span class="number">0</span>].runAction(seqScale);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;.bind(<span class="keyword">this</span>));</span><br><span class="line"></span><br><span class="line">            <span class="keyword">this</span>.addChild(<span class="keyword">this</span>._armature,<span class="number">200</span>);</span><br></pre></td></tr></table></figure></p>
 <a id="more"></a>
-<h3 id="u7B2C_u4E8C_u6B65_u8FDB_u884C_u51C6_u5907_u7684_u5DE5_u4F5C_u662F_u4EC0_u4E48_u5462_uFF1F_u6CA1_u9519_uFF0C_u5C31_u662F_u6253_u5305_u7ECF_u5178_u4E09_u4EF6_u5957_3A_SDK_+_NDK_r9d_+_ANT_1-9__2C_u8FD9_u91CC_u7684_u7248_u672C_u8BF4_u7684_u662F_u6700_u4F4E_u7248_uFF0C_u53EA_u80FD_u5411_u4E0A_u517C_u5BB9_u54E6_7E"><a href="#u7B2C_u4E8C_u6B65_u8FDB_u884C_u51C6_u5907_u7684_u5DE5_u4F5C_u662F_u4EC0_u4E48_u5462_uFF1F_u6CA1_u9519_uFF0C_u5C31_u662F_u6253_u5305_u7ECF_u5178_u4E09_u4EF6_u5957_3A_SDK_+_NDK_r9d_+_ANT_1-9__2C_u8FD9_u91CC_u7684_u7248_u672C_u8BF4_u7684_u662F_u6700_u4F4E_u7248_uFF0C_u53EA_u80FD_u5411_u4E0A_u517C_u5BB9_u54E6_7E" class="headerlink" title="第二步进行准备的工作是什么呢？没错，就是打包经典三件套: SDK + NDK r9d + ANT 1.9 ,这里的版本说的是最低版，只能向上兼容哦~"></a>第二步进行准备的工作是什么呢？没错，就是打包经典三件套: SDK + NDK r9d + ANT 1.9 ,这里的版本说的是最低版，只能向上兼容哦~</h3><p>操作的方法是什么呢？最方便的是打开cocos2d-js根本录下的Python脚本<code>setup.py</code>,双击运行再把三件套路径依次输入，例如：<code>D:\u0u0\sdk</code>；<code>D:\u0u0\android-ndk</code>；<code>D:\u0u0\ant\bin</code>。</p>
-<h3 id="u73B0_u5728_uFF0C_u6211_u4EEC_u79BB_u6210_u529F_u53EA_u5DEE_u4E00_u6B65_uFF01_u5B89_u88C5cocos_ide_u4E0Ecocostudio_uFF0C_u76F8_u4FE1_u8FD9_u5982_u5E73_u65F6_u88C5_u6E38_u620F_u4E00_u6837_u7684_u64CD_u4F5C_u53EF_u662F_u8DEF_u4EBA_u7686_u77E5_u54AF_7E"><a href="#u73B0_u5728_uFF0C_u6211_u4EEC_u79BB_u6210_u529F_u53EA_u5DEE_u4E00_u6B65_uFF01_u5B89_u88C5cocos_ide_u4E0Ecocostudio_uFF0C_u76F8_u4FE1_u8FD9_u5982_u5E73_u65F6_u88C5_u6E38_u620F_u4E00_u6837_u7684_u64CD_u4F5C_u53EF_u662F_u8DEF_u4EBA_u7686_u77E5_u54AF_7E" class="headerlink" title="现在，我们离成功只差一步！安装cocos ide与cocostudio，相信这如平时装游戏一样的操作可是路人皆知咯~"></a>现在，我们离成功只差一步！安装cocos ide与cocostudio，相信这如平时装游戏一样的操作可是路人皆知咯~</h3><p>再细说下cocos ide打开后的操作，cocos ide首先运行时，须把cocos2d工作台，也就是cocos2d-js的路径选中加载，到此，整个环境搞定！</p>
 
       
     </div>
@@ -268,18 +249,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/03/16/post-4/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          cocostudio 1.6 填坑小记
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/01/27/post-2/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Cocos2d-js模块化开发的解决方案</div>
+    <a href="/2016/03/16/post-4/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">cocostudio 1.6 填坑小记</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
