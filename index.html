@@ -228,18 +228,19 @@
 <ul>
 <li>C程序使用格式:</li>
 </ul>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> *ptr;  <span class="comment">//这里强调*ptr是一个int类型的值</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int *ptr;  //这里强调*ptr是一个int类型的值</span><br></pre></td></tr></table></figure>
 <ul>
 <li>C++程序使用格式:</li>
 </ul>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>* ptr;  <span class="comment">//这里强调int*是一个类型————指向int的指针</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int* ptr;  //这里强调int*是一个类型————指向int的指针</span><br></pre></td></tr></table></figure>
+<hr>
 <ol>
 <li><p>一定要在对指针应用解除引用运算符（*）之前，将指针初始化，要不就会成为一个不确定的野指针。</p>
 </li>
 <li><p>指针不是整型，指针和整数是两个截然不同的类型，不允许直接像C一个赋于没有声明的整数内存地址；</p>
 </li>
 </ol>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>* ptr;  </span><br><span class="line">ptr = <span class="number">0xB8000000</span>;   <span class="comment">//type mismatch</span></span><br><span class="line">ptr = (<span class="keyword">int</span>*)<span class="number">0xB8000000</span>;   <span class="comment">//type now match</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int* ptr;  </span><br><span class="line">ptr = <span class="number">0</span>xB8000000;   //<span class="built_in">type</span> mismatch</span><br><span class="line">ptr = (int*)<span class="number">0</span>xB8000000;   //<span class="built_in">type</span> now match</span><br></pre></td></tr></table></figure>
 <ol>
 <li>对空指针使用delete是安全的</li>
 </ol>
