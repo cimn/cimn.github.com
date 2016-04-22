@@ -4,17 +4,48 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Archives: 2016 | Cimn&#39;s blog</title>
+  <title>C++指针小结 | Cimn&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Record someting that I&apos;v learn">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Cimn's blog">
-<meta property="og:url" content="http://yoursite.com/archives/2016/index.html">
+  <meta name="description" content="####1. 对每个指针变量名，都需要一个*（间接值或解除引用运算符）。
+####2. *运算符两边的空格是可以选的。
+C程序使用格式:
+1int *ptr;  //这里强调*ptr是一个int类型的值
+
+C++程序使用格式:
+
+
+
+1int* ptr;  //这里强调int*是一个类型————指向int的指针
+####3. 一定要在对指针应用解除引用运算符（*）之前，将指针初始化，要不就会成为一">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C++指针小结">
+<meta property="og:url" content="http://yoursite.com/2016/04/23/post-6/index.html">
 <meta property="og:site_name" content="Cimn's blog">
-<meta property="og:description" content="Record someting that I&apos;v learn">
+<meta property="og:description" content="####1. 对每个指针变量名，都需要一个*（间接值或解除引用运算符）。
+####2. *运算符两边的空格是可以选的。
+C程序使用格式:
+1int *ptr;  //这里强调*ptr是一个int类型的值
+
+C++程序使用格式:
+
+
+
+1int* ptr;  //这里强调int*是一个类型————指向int的指针
+####3. 一定要在对指针应用解除引用运算符（*）之前，将指针初始化，要不就会成为一">
+<meta property="og:updated_time" content="2016-04-22T17:35:20.503Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Cimn's blog">
-<meta name="twitter:description" content="Record someting that I&apos;v learn">
+<meta name="twitter:title" content="C++指针小结">
+<meta name="twitter:description" content="####1. 对每个指针变量名，都需要一个*（间接值或解除引用运算符）。
+####2. *运算符两边的空格是可以选的。
+C程序使用格式:
+1int *ptr;  //这里强调*ptr是一个int类型的值
+
+C++程序使用格式:
+
+
+
+1int* ptr;  //这里强调int*是一个类型————指向int的指针
+####3. 一定要在对指针应用解除引用运算符（*）之前，将指针初始化，要不就会成为一">
   
     <link rel="alternative" href="/atom.xml" title="Cimn&#39;s blog" type="application/atom+xml">
   
@@ -192,212 +223,101 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-post-6" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/04/23/post-6/" class="archive-article-date">
-  	<time datetime="2016-04-22T16:53:26.000Z" itemprop="datePublished">Apr 23</time>
+    <div class="article-meta">
+      <a href="/2016/04/23/post-6/" class="article-date">
+  	<time datetime="2016-04-22T16:53:26.000Z" itemprop="datePublished">2016-04-23</time>
 </a>
-        </div>
-    	 
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/04/23/post-6/">C++指针小结</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      C++指针小结
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
 	<div class="article-tag tagcloud">
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C++</a></li></ul>
 	</div>
 
-          
+        
 
-        </div>
         <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
+      </div>
+      
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/04/14/post-5/" class="archive-article-date">
-  	<time datetime="2016-04-14T07:07:06.000Z" itemprop="datePublished">Apr 14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/04/14/post-5/">说说Javascript的bind()</a>
-    </h1>
-  
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>####1. 对每个指针变量名，都需要一个<code>*</code>（间接值或解除引用运算符）。</p>
+<h2 id="23_23_23_232-_*_u8FD0_u7B97_u7B26_u4E24_u8FB9_u7684_u7A7A_u683C_u662F_u53EF_u4EE5_u9009_u7684_u3002"><a href="#23_23_23_232-_*_u8FD0_u7B97_u7B26_u4E24_u8FB9_u7684_u7A7A_u683C_u662F_u53EF_u4EE5_u9009_u7684_u3002" class="headerlink" title="####2. *运算符两边的空格是可以选的。"></a>####2. <code>*</code>运算符两边的空格是可以选的。</h2><ul>
+<li><p>C程序使用格式:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> *ptr;  <span class="comment">//这里强调*ptr是一个int类型的值</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>C++程序使用格式:</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>* ptr;  <span class="comment">//这里强调int*是一个类型————指向int的指针</span></span><br></pre></td></tr></table></figure>
+<p>####3. 一定要在对指针应用解除引用运算符（*）之前，将指针初始化，要不就会成为一个不确定的野指针。</p>
+<p>####4. 指针不是整型，指针和整数是两个截然不同的类型，不允许直接像C一个赋于没有声明的整数内存地址；<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>* ptr;  </span><br><span class="line">ptr = <span class="number">0xB8000000</span>;   <span class="comment">//type mismatch</span></span><br><span class="line">ptr = (<span class="keyword">int</span>*)<span class="number">0xB8000000</span>;   <span class="comment">//type now match</span></span><br></pre></td></tr></table></figure></p>
+<p>####5. 对空指针使用delete是安全的</p>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/">nodejs</a></li></ul>
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/04/14/post-5/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">说说Javascript的bind()</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
 	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/03/16/post-4/" class="archive-article-date">
-  	<time datetime="2016-03-16T14:30:26.000Z" itemprop="datePublished">Mar 16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/03/16/post-4/">cocostudio 1.6 填坑小记</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cocostudio/">cocostudio</a></li></ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/03/05/post-3/" class="archive-article-date">
-  	<time datetime="2016-03-04T17:20:39.000Z" itemprop="datePublished">Mar 5</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/03/05/post-3/">cocos2d-js + cocos ide + cocostudio 环境的快速搭建</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cocos2d-js/">cocos2d-js</a></li></ul>
-	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/01/27/post-2/" class="archive-article-date">
-  	<time datetime="2016-01-27T12:30:28.000Z" itemprop="datePublished">Jan 27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/01/27/post-2/">Cocos2d-js模块化开发的解决方案</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cocos2d-js/">cocos2d-js</a></li></ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/01/05/post-1/" class="archive-article-date">
-  	<time datetime="2016-01-05T13:45:35.000Z" itemprop="datePublished">Jan 5</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/01/05/post-1/">Cocos2d-js 判断平台的两种方法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cocos2d-js/">cocos2d-js</a></li></ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2016/page/2/">2</a><a class="extend next" rel="next" href="/archives/2016/page/2/">Next &raquo;</a>
-    </nav>
-  
 
 </div>
       <footer id="footer">
@@ -423,8 +343,8 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false
