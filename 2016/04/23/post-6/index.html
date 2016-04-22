@@ -34,7 +34,7 @@ C++程序使用格式:
 
 注意：在C++中，int*是一种复合类型，是指向int的指针。
 一定要在对指针应用解除引用运算符（*）之前，将指针">
-<meta property="og:updated_time" content="2016-04-22T17:48:15.864Z">
+<meta property="og:updated_time" content="2016-04-22T17:49:58.406Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++指针小结">
 <meta name="twitter:description" content="对每个指针变量名，都需要一个*（间接值或解除引用运算符）。
@@ -281,7 +281,7 @@ C++程序使用格式:
  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int* ptr;  </span><br><span class="line">ptr = <span class="number">0</span>xB8000000;   //<span class="built_in">type</span> mismatch</span><br><span class="line">ptr = (int*)<span class="number">0</span>xB8000000;   //<span class="built_in">type</span> now match</span><br></pre></td></tr></table></figure>
 <hr>
 <h5 id="u6CE8_u610F_uFF1Aptr_u662Fint_u503C_u7684_u5730_u5740_u5E76_u4E0D_u610F_u5473_u7740ptr_u672C_u8EAB_u7684_u7C7B_u578B_u662Fint_21_21_21"><a href="#u6CE8_u610F_uFF1Aptr_u662Fint_u503C_u7684_u5730_u5740_u5E76_u4E0D_u610F_u5473_u7740ptr_u672C_u8EAB_u7684_u7C7B_u578B_u662Fint_21_21_21" class="headerlink" title="注意：ptr是int值的地址并不意味着ptr本身的类型是int!!!"></a>注意：ptr是int值的地址并不意味着ptr本身的类型是int!!!</h5></li>
-<li><p>对空指针使用delete是安全的</p>
+<li><p>对空指针使用delete是安全的。</p>
 </li>
 </ol>
 
