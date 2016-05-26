@@ -4,51 +4,18 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>C++指针小结 | Cimn&#39;s blog</title>
+  <title>squence实现间隔时间不同对象相同动作的实现方法 | Cimn&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="对每个指针变量名，都需要一个*（间接值或解除引用运算符）。
-*运算符两边的空格是可以选的。
-C程序使用格式:
-1int *ptr;  //这里强调*ptr是一个int类型的值
-
-C++程序使用格式:
-1int* ptr;  //这里强调int*是一个类型————指向int的指针
-
-
-
-注意：在C++中，int*是一种复合类型，是指向int的指针。
-一定要在对指针应用解除引用运算符（*）之前，将指针">
+  <meta name="description" content="动作(cc.Action)相信熟悉coccos2d的都不会陌生，动作作为一个游戏中必不可少的组成元素，分为瞬时动作(cc.ActionInstant)和组合动作(cc.ActionInterval)，动作往往不是单一的，而是复杂的组合，在这里我就说说组合动作中cc.Squence顺序动作的一个常用需求。例如：现在有个需求是这样的，需要在间隔时间(2s)不同对象依次执行相同动作，就如同体育课老师用报">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C++指针小结">
-<meta property="og:url" content="http://yoursite.com/2016/04/23/post-6/index.html">
+<meta property="og:title" content="squence实现间隔时间不同对象相同动作的实现方法">
+<meta property="og:url" content="http://yoursite.com/2016/05/27/post-7/index.html">
 <meta property="og:site_name" content="Cimn's blog">
-<meta property="og:description" content="对每个指针变量名，都需要一个*（间接值或解除引用运算符）。
-*运算符两边的空格是可以选的。
-C程序使用格式:
-1int *ptr;  //这里强调*ptr是一个int类型的值
-
-C++程序使用格式:
-1int* ptr;  //这里强调int*是一个类型————指向int的指针
-
-
-
-注意：在C++中，int*是一种复合类型，是指向int的指针。
-一定要在对指针应用解除引用运算符（*）之前，将指针">
-<meta property="og:updated_time" content="2016-04-23T12:49:20.317Z">
+<meta property="og:description" content="动作(cc.Action)相信熟悉coccos2d的都不会陌生，动作作为一个游戏中必不可少的组成元素，分为瞬时动作(cc.ActionInstant)和组合动作(cc.ActionInterval)，动作往往不是单一的，而是复杂的组合，在这里我就说说组合动作中cc.Squence顺序动作的一个常用需求。例如：现在有个需求是这样的，需要在间隔时间(2s)不同对象依次执行相同动作，就如同体育课老师用报">
+<meta property="og:updated_time" content="2016-05-26T18:00:41.487Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C++指针小结">
-<meta name="twitter:description" content="对每个指针变量名，都需要一个*（间接值或解除引用运算符）。
-*运算符两边的空格是可以选的。
-C程序使用格式:
-1int *ptr;  //这里强调*ptr是一个int类型的值
-
-C++程序使用格式:
-1int* ptr;  //这里强调int*是一个类型————指向int的指针
-
-
-
-注意：在C++中，int*是一种复合类型，是指向int的指针。
-一定要在对指针应用解除引用运算符（*）之前，将指针">
+<meta name="twitter:title" content="squence实现间隔时间不同对象相同动作的实现方法">
+<meta name="twitter:description" content="动作(cc.Action)相信熟悉coccos2d的都不会陌生，动作作为一个游戏中必不可少的组成元素，分为瞬时动作(cc.ActionInstant)和组合动作(cc.ActionInterval)，动作往往不是单一的，而是复杂的组合，在这里我就说说组合动作中cc.Squence顺序动作的一个常用需求。例如：现在有个需求是这样的，需要在间隔时间(2s)不同对象依次执行相同动作，就如同体育课老师用报">
   
     <link rel="alternative" href="/atom.xml" title="Cimn&#39;s blog" type="application/atom+xml">
   
@@ -226,11 +193,11 @@ C++程序使用格式:
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-post-6" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-post-7" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/04/23/post-6/" class="article-date">
-  	<time datetime="2016-04-22T16:53:26.000Z" itemprop="datePublished">2016-04-23</time>
+      <a href="/2016/05/27/post-7/" class="article-date">
+  	<time datetime="2016-05-26T17:42:04.000Z" itemprop="datePublished">2016-05-27</time>
 </a>
     </div>
   
@@ -243,7 +210,7 @@ C++程序使用格式:
         
   
     <h1 class="article-title" itemprop="name">
-      C++指针小结
+      squence实现间隔时间不同对象相同动作的实现方法
     </h1>
   
 
@@ -252,7 +219,7 @@ C++程序使用格式:
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C++</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cocos2d-js/">cocos2d-js</a></li></ul>
 	</div>
 
         
@@ -263,30 +230,8 @@ C++程序使用格式:
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ol>
-<li>对每个指针变量名，都需要一个<code>*</code>（间接值或解除引用运算符）。</li>
-<li><h2 id="*_u8FD0_u7B97_u7B26_u4E24_u8FB9_u7684_u7A7A_u683C_u662F_u53EF_u4EE5_u9009_u7684_u3002"><a href="#*_u8FD0_u7B97_u7B26_u4E24_u8FB9_u7684_u7A7A_u683C_u662F_u53EF_u4EE5_u9009_u7684_u3002" class="headerlink" title="*运算符两边的空格是可以选的。"></a><code>*</code>运算符两边的空格是可以选的。</h2><ul>
-<li><p>C程序使用格式:</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> *ptr;  <span class="comment">//这里强调*ptr是一个int类型的值</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>C++程序使用格式:</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>* ptr;  <span class="comment">//这里强调int*是一个类型————指向int的指针</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<hr>
-<h5 id="u6CE8_u610F_uFF1A_u5728C++_u4E2D_uFF0Cint*_u662F_u4E00_u79CD_u590D_u5408_u7C7B_u578B_uFF0C_u662F_u6307_u5411int_u7684_u6307_u9488_u3002"><a href="#u6CE8_u610F_uFF1A_u5728C++_u4E2D_uFF0Cint*_u662F_u4E00_u79CD_u590D_u5408_u7C7B_u578B_uFF0C_u662F_u6307_u5411int_u7684_u6307_u9488_u3002" class="headerlink" title="注意：在C++中，int*是一种复合类型，是指向int的指针。"></a>注意：在C++中，int*是一种复合类型，是指向int的指针。</h5></li>
-<li><p>一定要在对指针应用解除引用运算符（*）之前，将指针初始化，要不就会成为一个不确定的野指针。</p>
-</li>
-<li><p>指针不是整型，指针和整数是两个截然不同的类型，不允许直接像C一样直接赋于没有声明的整数内存地址；</p>
-<a id="more"></a>
- <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>* ptr;  </span><br><span class="line">ptr = <span class="number">0xB8000000</span>;   <span class="comment">//type mismatch</span></span><br><span class="line">ptr = (<span class="keyword">int</span>*)<span class="number">0xB8000000</span>;   <span class="comment">//type now match</span></span><br></pre></td></tr></table></figure>
-<hr>
-<h5 id="u6CE8_u610F_uFF1Aptr_u662Fint_u503C_u7684_u5730_u5740_u5E76_u4E0D_u610F_u5473_u7740ptr_u672C_u8EAB_u7684_u7C7B_u578B_u662Fint_21_21_21"><a href="#u6CE8_u610F_uFF1Aptr_u662Fint_u503C_u7684_u5730_u5740_u5E76_u4E0D_u610F_u5473_u7740ptr_u672C_u8EAB_u7684_u7C7B_u578B_u662Fint_21_21_21" class="headerlink" title="注意：ptr是int值的地址并不意味着ptr本身的类型是int!!!"></a>注意：ptr是int值的地址并不意味着ptr本身的类型是int!!!</h5></li>
-<li><p>对空指针使用delete是安全的。</p>
-</li>
-<li><p>在很多情况下，可以用相同的方式使用指针和数组名，因为C++将数组名解释为地址，区别之一是，可以修改指针的值，而数组名是常量。</p>
- <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pointername = pointername + <span class="number">1</span>;	<span class="comment">//valid</span></span><br><span class="line">arrayname = arrayname + <span class="number">1</span>;	<span class="comment">//not allowed</span></span><br></pre></td></tr></table></figure></li>
-</ol>
+        <h3 id="u52A8_u4F5C_28cc-Action_29_u76F8_u4FE1_u719F_u6089coccos2d_u7684_u90FD_u4E0D_u4F1A_u964C_u751F_uFF0C_u52A8_u4F5C_u4F5C_u4E3A_u4E00_u4E2A_u6E38_u620F_u4E2D_u5FC5_u4E0D_u53EF_u5C11_u7684_u7EC4_u6210_u5143_u7D20_uFF0C_u5206_u4E3A_u77AC_u65F6_u52A8_u4F5C_28cc-ActionInstant_29_u548C_u7EC4_u5408_u52A8_u4F5C_28cc-ActionInterval_29_uFF0C_u52A8_u4F5C_u5F80_u5F80_u4E0D_u662F_u5355_u4E00_u7684_uFF0C_u800C_u662F_u590D_u6742_u7684_u7EC4_u5408_uFF0C_u5728_u8FD9_u91CC_u6211_u5C31_u8BF4_u8BF4_u7EC4_u5408_u52A8_u4F5C_u4E2Dcc-Squence_u987A_u5E8F_u52A8_u4F5C_u7684_u4E00_u4E2A_u5E38_u7528_u9700_u6C42_u3002"><a href="#u52A8_u4F5C_28cc-Action_29_u76F8_u4FE1_u719F_u6089coccos2d_u7684_u90FD_u4E0D_u4F1A_u964C_u751F_uFF0C_u52A8_u4F5C_u4F5C_u4E3A_u4E00_u4E2A_u6E38_u620F_u4E2D_u5FC5_u4E0D_u53EF_u5C11_u7684_u7EC4_u6210_u5143_u7D20_uFF0C_u5206_u4E3A_u77AC_u65F6_u52A8_u4F5C_28cc-ActionInstant_29_u548C_u7EC4_u5408_u52A8_u4F5C_28cc-ActionInterval_29_uFF0C_u52A8_u4F5C_u5F80_u5F80_u4E0D_u662F_u5355_u4E00_u7684_uFF0C_u800C_u662F_u590D_u6742_u7684_u7EC4_u5408_uFF0C_u5728_u8FD9_u91CC_u6211_u5C31_u8BF4_u8BF4_u7EC4_u5408_u52A8_u4F5C_u4E2Dcc-Squence_u987A_u5E8F_u52A8_u4F5C_u7684_u4E00_u4E2A_u5E38_u7528_u9700_u6C42_u3002" class="headerlink" title="动作(cc.Action)相信熟悉coccos2d的都不会陌生，动作作为一个游戏中必不可少的组成元素，分为瞬时动作(cc.ActionInstant)和组合动作(cc.ActionInterval)，动作往往不是单一的，而是复杂的组合，在这里我就说说组合动作中cc.Squence顺序动作的一个常用需求。"></a>动作(cc.Action)相信熟悉coccos2d的都不会陌生，动作作为一个游戏中必不可少的组成元素，分为瞬时动作(cc.ActionInstant)和组合动作(cc.ActionInterval)，动作往往不是单一的，而是复杂的组合，在这里我就说说组合动作中cc.Squence顺序动作的一个常用需求。</h3><p>例如：现在有个需求是这样的，需要在间隔时间(2s)不同对象依次执行相同动作，就如同体育课老师用报数来清点人数一样，不同的学生依次报数。说到这里，有的人就会说，这不是很简单吗？当然，你可以每个对象执行runAction同一个动作，然后第一个等待0s，第二个等待2s…</p>
+<p>哈哈，可以吧，感觉好黄好暴力，当然可以，在简单的游戏下这样做是没问题，但在复杂的游戏中，不同层的对象之间，cc.delayTime会出现不可预知的bug，这时候怎么办呢？<br><a id="more"></a></p>
 
       
     </div>
@@ -296,18 +241,9 @@ C++程序使用格式:
     
 <nav id="article-nav">
   
-    <a href="/2016/05/27/post-7/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          squence实现间隔时间不同对象相同动作的实现方法
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/04/14/post-5/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">说说Javascript的bind()</div>
+    <a href="/2016/04/23/post-6/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">C++指针小结</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
