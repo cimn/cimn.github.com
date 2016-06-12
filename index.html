@@ -194,6 +194,71 @@
 
       <div class="body-wrap">
   
+    <article id="post-post-9" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/06/13/post-9/" class="article-date">
+  	<time datetime="2016-06-12T16:38:18.000Z" itemprop="datePublished">2016-06-13</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/06/13/post-9/">android平台上使用js直接调用Java</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="u5728cocos2d-js_3-0+__u4E2D_uFF0C_u5728android_u5E73_u53F0_u4E0A_u6211_u4EEC_u53EF_u4EE5_u76F4_u63A5_u5728js_u4E2D_u8C03_u7528java_u65B9_u6CD5_u3002_u4F7F_u7528_u65B9_u6CD5_uFF1A"><a href="#u5728cocos2d-js_3-0+__u4E2D_uFF0C_u5728android_u5E73_u53F0_u4E0A_u6211_u4EEC_u53EF_u4EE5_u76F4_u63A5_u5728js_u4E2D_u8C03_u7528java_u65B9_u6CD5_u3002_u4F7F_u7528_u65B9_u6CD5_uFF1A" class="headerlink" title="在cocos2d-js 3.0+ 中，在android平台上我们可以直接在js中调用java方法。使用方法："></a>在cocos2d-js 3.0+ 中，在android平台上我们可以直接在js中调用java方法。使用方法：</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> o = jsb.reflection.callStaticMethod(className, methodName, methodSignature, parameters...)</span><br></pre></td></tr></table></figure>
+<ol>
+<li>className。 –Java的类名。</li>
+<li>methodName。 –Java的方法名。</li>
+<li>methodSignature。 –Java的方法签名。</li>
+<li>parameters  –Java的参数名。
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cocos2d-js/">cocos2d-js</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2016/06/13/post-9/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-post-8" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -507,73 +572,6 @@
       
         <p class="article-more-link">
           <a  href="/2016/03/16/post-4/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-post-3" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/03/05/post-3/" class="article-date">
-  	<time datetime="2016-03-04T17:20:39.000Z" itemprop="datePublished">2016-03-05</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/05/post-3/">cocos2d-js + cocos ide + cocostudio 环境的快速搭建</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="u4E00_u8BF4_u5230cocos2dx_u73AF_u5883_u642D_u5EFA_uFF0C_u9996_u5148_u5C31_u5E94_u7ACB_u523B_u60F3_u8D77_u4E24_u4E2A_u5FC5_u5907_u8BED_u8A00_u73AF_u5883_uFF0CJDK_u548CPyhton_21"><a href="#u4E00_u8BF4_u5230cocos2dx_u73AF_u5883_u642D_u5EFA_uFF0C_u9996_u5148_u5C31_u5E94_u7ACB_u523B_u60F3_u8D77_u4E24_u4E2A_u5FC5_u5907_u8BED_u8A00_u73AF_u5883_uFF0CJDK_u548CPyhton_21" class="headerlink" title="一说到cocos2dx环境搭建，首先就应立刻想起两个必备语言环境，JDK和Pyhton!"></a>一说到cocos2dx环境搭建，首先就应立刻想起两个必备语言环境，JDK和Pyhton!</h3><ol>
-<li>经典版本JDK 1.7+ ，这里是<a href="http://jingyan.baidu.com/article/6dad5075d1dc40a123e36ea3.html">安装教程与环境变量配置</a>;</li>
-<li>经典Python 2.7+ ， 这里是<a href="https://www.python.org/downloads/">下载地址</a>；</li>
-</ol>
-<ul>
-<li>这里比较重要的一步是Python环境变量的配置：“环境变量”选项卡中在“系统变量”的“Path”中添加入Python路径！</li>
-<li>在cmd控制台下输入<code>python</code>命令，如成功即出现版本号。</li>
-</ul>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cocos2d-js/">cocos2d-js</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/03/05/post-3/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
