@@ -194,6 +194,70 @@
 
       <div class="body-wrap">
   
+    <article id="post-post-4" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/16/post-4/" class="article-date">
+  	<time datetime="2016-03-16T14:30:26.000Z" itemprop="datePublished">2016-03-16</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/16/post-4/">cocostudio 1.6 填坑小记</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="u8BDD_u8BF4cocos_u5B98_u65B9_u5728_u8FC7_u5E74_u4E4B_u9645_u65B0_u51FA_u4E86cocos_creator_u6D4B_u8BD5_u7248_2C_u73B0_u5728_u4EC0_u4E48_u5E74_u4EE3_uFF0C_u8FD8cocostudio_1-6_uFF1F_uFF01_u5728_u6B64_u6682_u4E0D_u8BF4_uFF0C_u8BF4_u8BF4cocostudio1-6_u4F17_u6240_u5468_u77E5_u7684_u951A_u70B9_u4E0D_u9F50bug_uFF01"><a href="#u8BDD_u8BF4cocos_u5B98_u65B9_u5728_u8FC7_u5E74_u4E4B_u9645_u65B0_u51FA_u4E86cocos_creator_u6D4B_u8BD5_u7248_2C_u73B0_u5728_u4EC0_u4E48_u5E74_u4EE3_uFF0C_u8FD8cocostudio_1-6_uFF1F_uFF01_u5728_u6B64_u6682_u4E0D_u8BF4_uFF0C_u8BF4_u8BF4cocostudio1-6_u4F17_u6240_u5468_u77E5_u7684_u951A_u70B9_u4E0D_u9F50bug_uFF01" class="headerlink" title="话说cocos官方在过年之际新出了cocos creator测试版,现在什么年代，还cocostudio 1.6？！在此暂不说，说说cocostudio1..6众所周知的锚点不齐bug！"></a>话说cocos官方在过年之际新出了cocos creator测试版,现在什么年代，还cocostudio 1.6？！在此暂不说，说说cocostudio1..6众所周知的锚点不齐bug！</h5><p>但是，有bug总有解决的方法，我的办法就是取到当前对象的大小，你锚点不正对吧，我自已来！方法如下：</p>
+<ol>
+<li>首先，还是先说一说cocostudio在cocos-js中的加载方式：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">ctor: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="keyword">this</span>._super();</span><br><span class="line">		<span class="keyword">this</span>._root = ccs.uiReader.widgetFromJsonFile(FynnJsonPath+<span class="string">"NewFynnLobby.json"</span>);<span class="comment">//加载json文件，cocostudio导出的UI文件</span></span><br><span class="line">		<span class="keyword">this</span>._root.setContentSize(cc.winSize);</span><br><span class="line">		<span class="keyword">this</span>.addChild(<span class="keyword">this</span>._root);</span><br><span class="line">		<span class="comment">//取子节点下元素方法</span></span><br><span class="line">		<span class="keyword">this</span>._bg = ccui.helper.seekWidgetByName(<span class="keyword">this</span>._root,<span class="string">"bg_all"</span>);<span class="comment">//BG		</span></span><br><span class="line">		<span class="keyword">this</span>._doustar = ccui.helper.seekWidgetByName(<span class="keyword">this</span>._root,<span class="string">"_ico_ledou"</span>);<span class="comment">//doustar</span></span><br><span class="line">		<span class="keyword">this</span>._jinbistar = ccui.helper.seekWidgetByName(<span class="keyword">this</span>._root,<span class="string">"_ico_jinbi"</span>);<span class="comment">//_ico_jinbi</span></span><br><span class="line">		<span class="keyword">this</span>._star = ccui.helper.seekWidgetByName(<span class="keyword">this</span>._root,<span class="string">"_btn_enterico_1"</span>);<span class="comment">//_btn_enterico</span></span><br><span class="line">		&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cocostudio/">cocostudio</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2016/03/16/post-4/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-post-3" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">

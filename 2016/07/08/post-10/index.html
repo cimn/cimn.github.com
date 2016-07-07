@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>如何去掉cocos code ide调试框菜单栏 | Cimn&#39;s blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="在cocos code ide中右键工程名-&amp;gt;cocos Tools-&amp;gt;Build Custom Simulators 等待编译完毕后在frameworks\runtime-src\proj.win32里面用vs打开工程 然后查看resource\game.rc的代码,注释掉menu部分-&amp;gt;重新编译。
+123456789101112131415161718192021222324">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何去掉cocos code ide调试框菜单栏">
+<meta property="og:url" content="http://yoursite.com/2016/07/08/post-10/index.html">
+<meta property="og:site_name" content="Cimn's blog">
+<meta property="og:description" content="在cocos code ide中右键工程名-&amp;gt;cocos Tools-&amp;gt;Build Custom Simulators 等待编译完毕后在frameworks\runtime-src\proj.win32里面用vs打开工程 然后查看resource\game.rc的代码,注释掉menu部分-&amp;gt;重新编译。
+123456789101112131415161718192021222324">
+<meta property="og:updated_time" content="2016-07-07T16:51:36.629Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="如何去掉cocos code ide调试框菜单栏">
+<meta name="twitter:description" content="在cocos code ide中右键工程名-&amp;gt;cocos Tools-&amp;gt;Build Custom Simulators 等待编译完毕后在frameworks\runtime-src\proj.win32里面用vs打开工程 然后查看resource\game.rc的代码,注释掉menu部分-&amp;gt;重新编译。
+123456789101112131415161718192021222324">
+  
+    <link rel="alternative" href="/atom.xml" title="Cimn&#39;s blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/img/meicon.png" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">cimn_HJ</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">Record someting that I&#39;v learn</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/cimn" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/huangjin2008" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_blank" href="/#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="/#" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/C/" style="font-size: 10px;">C++</a> <a href="/tags/cocos2d-js/" style="font-size: 20px;">cocos2d-js</a> <a href="/tags/cocostudio/" style="font-size: 10px;">cocostudio</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://dexsinis.github.io/">DexSinis的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://mazzy.cn/">Mazzy&#39;s小阁</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">游戏爱好者，IT狗</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">cimn_HJ</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="/img/meicon.png" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">cimn_HJ</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">Record someting that I&#39;v learn</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/cimn" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/huangjin2008" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="/#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="/#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-post-10" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/07/08/post-10/" class="article-date">
+  	<time datetime="2016-07-07T16:47:14.000Z" itemprop="datePublished">2016-07-08</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      如何去掉cocos code ide调试框菜单栏
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cocos2d-js/">cocos2d-js</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在cocos code ide中右键工程名-&gt;cocos Tools-&gt;Build Custom Simulators 等待编译完毕后在frameworks\runtime-src\proj.win32里面用vs打开工程 然后查看resource\game.rc的代码,注释掉menu部分-&gt;重新编译。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/////////////////////////////////////////////////////////////////////////////</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// Menu</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//IDR_MENU_COCOS MENU</span></span><br><span class="line"><span class="comment">//BEGIN</span></span><br><span class="line"><span class="comment">//    POPUP "&amp;File"</span></span><br><span class="line"><span class="comment">//    BEGIN</span></span><br><span class="line"><span class="comment">//        MENUITEM SEPARATOR</span></span><br><span class="line"><span class="comment">//        MENUITEM "E&amp;xit",                       ID_FILE_EXIT</span></span><br><span class="line"><span class="comment">//    END</span></span><br><span class="line"><span class="comment">//    POPUP "&amp;View"</span></span><br><span class="line"><span class="comment">//    BEGIN</span></span><br><span class="line"><span class="comment">//        MENUITEM SEPARATOR</span></span><br><span class="line"><span class="comment">//        MENUITEM "&amp;Portrait",                   ID_VIEW_PORTRAIT</span></span><br><span class="line"><span class="comment">//        MENUITEM "&amp;Landscape",                  ID_VIEW_LANDSCAPE</span></span><br><span class="line"><span class="comment">//        MENUITEM SEPARATOR</span></span><br><span class="line"><span class="comment">//        MENUITEM "&amp;Actual(100%)",               ID_VIEW_ZOOMOUT100</span></span><br><span class="line"><span class="comment">//        MENUITEM "Zoom Out(75%)",               ID_VIEW_ZOOMOUT75</span></span><br><span class="line"><span class="comment">//        MENUITEM "Zoom Out(50%)",               ID_VIEW_ZOOMOUT50</span></span><br><span class="line"><span class="comment">//        MENUITEM "Zoom Out(25%)",               ID_VIEW_ZOOMOUT25</span></span><br><span class="line"><span class="comment">//    END</span></span><br><span class="line"><span class="comment">//    POPUP "&amp;Control"</span></span><br><span class="line"><span class="comment">//    BEGIN</span></span><br><span class="line"><span class="comment">//        MENUITEM "Restart(F5)",                 ID_CONTROL_RELOAD</span></span><br><span class="line"><span class="comment">//        MENUITEM "Keep Window Top",             ID_CONTROL_TOP</span></span><br><span class="line"><span class="comment">//    END</span></span><br><span class="line"><span class="comment">//    POPUP "&amp;Help"</span></span><br><span class="line"><span class="comment">//    BEGIN</span></span><br><span class="line"><span class="comment">//        MENUITEM "&amp;About ...",                  ID_HELP_ABOUT</span></span><br><span class="line"><span class="comment">//    END</span></span><br><span class="line"><span class="comment">//END</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/06/13/post-9/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">android平台上使用js直接调用Java</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 cimn_HJ
+    	</div>
+      	<div class="footer-right">
+      		power by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
