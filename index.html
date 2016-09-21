@@ -116,7 +116,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/C/" style="font-size: 10px;">C++</a> <a href="/tags/cocos2d-js/" style="font-size: 20px;">cocos2d-js</a> <a href="/tags/cocostudio/" style="font-size: 10px;">cocostudio</a>
+						<a href="/tags/C/" style="font-size: 15px;">C++</a> <a href="/tags/cocos2d-js/" style="font-size: 20px;">cocos2d-js</a> <a href="/tags/cocostudio/" style="font-size: 10px;">cocostudio</a>
 					</div>
 				</section>
 				
@@ -193,6 +193,76 @@
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-post-11" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/09/11/post-11/" class="article-date">
+  	<time datetime="2016-09-11T02:52:49.000Z" itemprop="datePublished">2016-09-11</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/09/11/post-11/">C/C++的左值和右值与其应用</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <pre><code>左值是指可被引用的数据对象(就是说有变量名，可用地址访问)，如变量(常规变量和const变量)、数组无素、结构成员、引用和解除引用的指针。
+非左值包括字面常量（&quot;Hello World!&quot;由地址表示除外）和包含多项表达式：
+x + 3 = 5.0;  //It&apos;s wrong
+
+左右值最常出现的地方是什么呢？
+这要涉及到C++的一个临时变量的问题，临时变量产生条件：当实参与引用参数不匹配，C++将产生临时变量。也就是说引用传参的本来目的，改变传入变量的值会失效，而变成使用临时变量，相当于引用参数是const引用。
+
+什么时候创建临时变量呢？
+&lt;!--more--&gt;
+1. 实参的类型正确，但不是左值；（x+10或7.0）;
+2. 实参的类型不正确，但可以转换为正确的类型；
+</code></pre><h6 id="u6240_u4EE5_u7EFC_u4E0A_u6240_u8FF0_uFF0C_u5BF9_u4E8E_u5F15_u7528_u53C2_u6570_u58F0_u660E_u6211_u4EEC_u8981_u5C3D_u53EF_u80FD_u5730_u4F7F_u7528const"><a href="#u6240_u4EE5_u7EFC_u4E0A_u6240_u8FF0_uFF0C_u5BF9_u4E8E_u5F15_u7528_u53C2_u6570_u58F0_u660E_u6211_u4EEC_u8981_u5C3D_u53EF_u80FD_u5730_u4F7F_u7528const" class="headerlink" title="所以综上所述，对于引用参数声明我们要尽可能地使用const"></a>所以综上所述，对于引用参数声明我们要尽可能地使用const</h6><p>   在这里顺便提一下C++11的新引用 ——右值引用（&amp;&amp;）！</p>
+<p>   来段实例代码：</p>
+   <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">double</span> &amp;&amp; rref = <span class="built_in">std</span>::<span class="built_in">sqrt</span>(<span class="number">36.00</span>);   <span class="comment">//右值不能用 double&amp;</span></span><br><span class="line"><span class="keyword">double</span> j = <span class="number">15.0</span>;</span><br><span class="line"><span class="keyword">double</span> &amp;&amp; jref = <span class="number">2.0</span> * j + <span class="number">18.5</span>;    <span class="comment">//右值不能用 double&amp;</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C++</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-post-10" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -506,68 +576,6 @@
       
         <p class="article-more-link">
           <a  href="/2016/04/23/post-6/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-post-5" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/04/14/post-5/" class="article-date">
-  	<time datetime="2016-04-14T07:07:06.000Z" itemprop="datePublished">2016-04-14</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/04/14/post-5/">说说Javascript的bind()</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>   我们都知道，对于Javascript的运行时<code>this</code>来说，函数进回调之前一定要保存<code>this</code>,通常的做法如下:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> _that = <span class="keyword">this</span>;	<span class="comment">//用一个局部变量保存this的值再进放回调callback</span></span><br></pre></td></tr></table></figure></p>
-<p>本来通常情况下处理函数都要用一层匿名函数包裹一下，才能维持处理函数本身的this.也可以直接通过.bind(logger)人为的将其执行时的this指向logger对象。</p>
-<p>而且有个比较好用说起来又复杂的情况是与函数的闭包一起使用，例子是我用cocosjs写的一段代码，如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//闭包嵌套</span></span><br><span class="line">  ccs.armatureDataManager.addArmatureFileInfo(FynnFlashPath + <span class="string">"songli.ExportJson"</span>);</span><br><span class="line">            <span class="keyword">var</span> temp = <span class="keyword">new</span> <span class="built_in">Array</span>();</span><br><span class="line">            <span class="keyword">this</span>._armature = <span class="keyword">new</span> ccs.Armature(<span class="string">"songli"</span>);</span><br><span class="line">            <span class="keyword">this</span>._armature.getAnimation().play(<span class="string">"songli"</span>,-<span class="number">1</span>,<span class="number">0</span>);</span><br><span class="line">            <span class="keyword">this</span>._armature.x = cc.winSize.width / <span class="number">2</span>;</span><br><span class="line">            <span class="keyword">this</span>._armature.y = cc.winSize.height / <span class="number">2</span>;</span><br><span class="line">            temp.push(<span class="keyword">this</span>._armature);</span><br><span class="line">            <span class="keyword">this</span>._armature.getAnimation().setMovementEventCallFunc(<span class="function"><span class="keyword">function</span>(<span class="params">armature, movementType, movementID</span>) </span>&#123;</span><br><span class="line">                <span class="keyword">if</span> (movementType == ccs.MovementEventType.complete) &#123;</span><br><span class="line">                        <span class="keyword">var</span> toBig = cc.scaleTo(<span class="number">0.2</span>,<span class="number">1.2</span>);</span><br><span class="line">                        <span class="keyword">var</span> toSmall = cc.scaleTo(<span class="number">0.2</span>, <span class="number">0</span>);</span><br><span class="line">                        <span class="keyword">var</span> toFade = cc.fadeOut(<span class="number">0.2</span>);</span><br><span class="line">                        <span class="keyword">var</span> spawn = cc.spawn(toSmall,toFade);                        </span><br><span class="line">                        <span class="keyword">var</span> seqScale = cc.sequence(toBig,spawn,cc.callFunc(<span class="function"><span class="keyword">function</span>(<span class="params">selectorTarget</span>)</span>&#123;</span><br><span class="line">                            <span class="keyword">if</span>(temp!=<span class="literal">null</span>)&#123;</span><br><span class="line">                                temp[<span class="number">0</span>].removeFromParent(<span class="literal">true</span>);</span><br><span class="line">                                cc.log(<span class="string">"动画Release!"</span>)</span><br><span class="line">                            &#125;</span><br><span class="line">                        &#125;, temp));</span><br><span class="line">                        temp[<span class="number">0</span>].runAction(seqScale);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;.bind(<span class="keyword">this</span>));</span><br><span class="line"></span><br><span class="line">            <span class="keyword">this</span>.addChild(<span class="keyword">this</span>._armature,<span class="number">200</span>);</span><br></pre></td></tr></table></figure></p>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cocos2d-js/">cocos2d-js</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/04/14/post-5/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>

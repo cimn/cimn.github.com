@@ -4,17 +4,33 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Tag: cocostudio | Cimn&#39;s blog</title>
+  <title>C/C++的左值和右值与其应用 | Cimn&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Record someting that I&apos;v learn">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Cimn's blog">
-<meta property="og:url" content="http://yoursite.com/tags/cocostudio/index.html">
+  <meta name="description" content="左值是指可被引用的数据对象(就是说有变量名，可用地址访问)，如变量(常规变量和const变量)、数组无素、结构成员、引用和解除引用的指针。
+非左值包括字面常量（&amp;quot;Hello World!&amp;quot;由地址表示除外）和包含多项表达式：
+x + 3 = 5.0;  //It&amp;apos;s wrong
+
+左右值最常出现的地方是什么呢？
+这要涉及到C++的一个临时变量的问题，临时变量产生条件：当">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C/C++的左值和右值与其应用">
+<meta property="og:url" content="http://yoursite.com/2016/09/11/post-11/index.html">
 <meta property="og:site_name" content="Cimn's blog">
-<meta property="og:description" content="Record someting that I&apos;v learn">
+<meta property="og:description" content="左值是指可被引用的数据对象(就是说有变量名，可用地址访问)，如变量(常规变量和const变量)、数组无素、结构成员、引用和解除引用的指针。
+非左值包括字面常量（&amp;quot;Hello World!&amp;quot;由地址表示除外）和包含多项表达式：
+x + 3 = 5.0;  //It&amp;apos;s wrong
+
+左右值最常出现的地方是什么呢？
+这要涉及到C++的一个临时变量的问题，临时变量产生条件：当">
+<meta property="og:updated_time" content="2016-09-21T17:54:21.304Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Cimn's blog">
-<meta name="twitter:description" content="Record someting that I&apos;v learn">
+<meta name="twitter:title" content="C/C++的左值和右值与其应用">
+<meta name="twitter:description" content="左值是指可被引用的数据对象(就是说有变量名，可用地址访问)，如变量(常规变量和const变量)、数组无素、结构成员、引用和解除引用的指针。
+非左值包括字面常量（&amp;quot;Hello World!&amp;quot;由地址表示除外）和包含多项表达式：
+x + 3 = 5.0;  //It&amp;apos;s wrong
+
+左右值最常出现的地方是什么呢？
+这要涉及到C++的一个临时变量的问题，临时变量产生条件：当">
   
     <link rel="alternative" href="/atom.xml" title="Cimn&#39;s blog" type="application/atom+xml">
   
@@ -192,53 +208,102 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-post-11" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/03/16/post-4/" class="archive-article-date">
-  	<time datetime="2016-03-16T14:30:26.000Z" itemprop="datePublished">Mar 16</time>
+    <div class="article-meta">
+      <a href="/2016/09/11/post-11/" class="article-date">
+  	<time datetime="2016-09-11T02:52:49.000Z" itemprop="datePublished">2016-09-11</time>
 </a>
-        </div>
-    	 
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/03/16/post-4/">cocostudio 1.6 填坑小记</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      C/C++的左值和右值与其应用
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cocostudio/">cocostudio</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C++</a></li></ul>
 	</div>
 
-          
+        
 
-        </div>
         <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
+      </div>
+      
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <pre><code>左值是指可被引用的数据对象(就是说有变量名，可用地址访问)，如变量(常规变量和const变量)、数组无素、结构成员、引用和解除引用的指针。
+非左值包括字面常量（&quot;Hello World!&quot;由地址表示除外）和包含多项表达式：
+x + 3 = 5.0;  //It&apos;s wrong
+
+左右值最常出现的地方是什么呢？
+这要涉及到C++的一个临时变量的问题，临时变量产生条件：当实参与引用参数不匹配，C++将产生临时变量。也就是说引用传参的本来目的，改变传入变量的值会失效，而变成使用临时变量，相当于引用参数是const引用。
+
+什么时候创建临时变量呢？
+&lt;!--more--&gt;
+1. 实参的类型正确，但不是左值；（x+10或7.0）;
+2. 实参的类型不正确，但可以转换为正确的类型；
+</code></pre><h6 id="u6240_u4EE5_u7EFC_u4E0A_u6240_u8FF0_uFF0C_u5BF9_u4E8E_u5F15_u7528_u53C2_u6570_u58F0_u660E_u6211_u4EEC_u8981_u5C3D_u53EF_u80FD_u5730_u4F7F_u7528const"><a href="#u6240_u4EE5_u7EFC_u4E0A_u6240_u8FF0_uFF0C_u5BF9_u4E8E_u5F15_u7528_u53C2_u6570_u58F0_u660E_u6211_u4EEC_u8981_u5C3D_u53EF_u80FD_u5730_u4F7F_u7528const" class="headerlink" title="所以综上所述，对于引用参数声明我们要尽可能地使用const"></a>所以综上所述，对于引用参数声明我们要尽可能地使用const</h6><p>   在这里顺便提一下C++11的新引用 ——右值引用（&amp;&amp;）！</p>
+<p>   来段实例代码：</p>
+   <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">double</span> &amp;&amp; rref = <span class="built_in">std</span>::<span class="built_in">sqrt</span>(<span class="number">36.00</span>);   <span class="comment">//右值不能用 double&amp;</span></span><br><span class="line"><span class="keyword">double</span> j = <span class="number">15.0</span>;</span><br><span class="line"><span class="keyword">double</span> &amp;&amp; jref = <span class="number">2.0</span> * j + <span class="number">18.5</span>;    <span class="comment">//右值不能用 double&amp;</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/07/08/post-10/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">如何去掉cocos code ide调试框菜单栏</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+
 
 </div>
       <footer id="footer">
@@ -264,9 +329,9 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false
 	}
