@@ -7,30 +7,24 @@
   <title>C/C++的左值和右值与其应用 | Cimn&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="左值是指可被引用的数据对象(就是说有变量名，可用地址访问)，如变量(常规变量和const变量)、数组无素、结构成员、引用和解除引用的指针。
-非左值包括字面常量（&amp;quot;Hello World!&amp;quot;由地址表示除外）和包含多项表达式：
-x + 3 = 5.0;  //It&amp;apos;s wrong
-
-左右值最常出现的地方是什么呢？
-这要涉及到C++的一个临时变量的问题，临时变量产生条件：当">
+  非左值包括字面常量（”Hello World!”由地址表示除外）和包含多项表达式：
+  1x + 3 = 5.0;  //It&apos;s wrong
+  左右值最常出现的地方是什么呢？  这要涉及到C++的一个临时变量的问题，临时变量产生条件：当实参与引用参数不">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C/C++的左值和右值与其应用">
 <meta property="og:url" content="http://yoursite.com/2016/09/11/post-11/index.html">
 <meta property="og:site_name" content="Cimn's blog">
 <meta property="og:description" content="左值是指可被引用的数据对象(就是说有变量名，可用地址访问)，如变量(常规变量和const变量)、数组无素、结构成员、引用和解除引用的指针。
-非左值包括字面常量（&amp;quot;Hello World!&amp;quot;由地址表示除外）和包含多项表达式：
-x + 3 = 5.0;  //It&amp;apos;s wrong
-
-左右值最常出现的地方是什么呢？
-这要涉及到C++的一个临时变量的问题，临时变量产生条件：当">
-<meta property="og:updated_time" content="2016-09-21T17:54:21.304Z">
+  非左值包括字面常量（”Hello World!”由地址表示除外）和包含多项表达式：
+  1x + 3 = 5.0;  //It&apos;s wrong
+  左右值最常出现的地方是什么呢？  这要涉及到C++的一个临时变量的问题，临时变量产生条件：当实参与引用参数不">
+<meta property="og:updated_time" content="2016-09-21T17:58:22.070Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C/C++的左值和右值与其应用">
 <meta name="twitter:description" content="左值是指可被引用的数据对象(就是说有变量名，可用地址访问)，如变量(常规变量和const变量)、数组无素、结构成员、引用和解除引用的指针。
-非左值包括字面常量（&amp;quot;Hello World!&amp;quot;由地址表示除外）和包含多项表达式：
-x + 3 = 5.0;  //It&amp;apos;s wrong
-
-左右值最常出现的地方是什么呢？
-这要涉及到C++的一个临时变量的问题，临时变量产生条件：当">
+  非左值包括字面常量（”Hello World!”由地址表示除外）和包含多项表达式：
+  1x + 3 = 5.0;  //It&apos;s wrong
+  左右值最常出现的地方是什么呢？  这要涉及到C++的一个临时变量的问题，临时变量产生条件：当实参与引用参数不">
   
     <link rel="alternative" href="/atom.xml" title="Cimn&#39;s blog" type="application/atom+xml">
   
@@ -245,18 +239,16 @@ x + 3 = 5.0;  //It&amp;apos;s wrong
     
     <div class="article-entry" itemprop="articleBody">
       
-        <pre><code>左值是指可被引用的数据对象(就是说有变量名，可用地址访问)，如变量(常规变量和const变量)、数组无素、结构成员、引用和解除引用的指针。
-非左值包括字面常量（&quot;Hello World!&quot;由地址表示除外）和包含多项表达式：
-x + 3 = 5.0;  //It&apos;s wrong
-
-左右值最常出现的地方是什么呢？
-这要涉及到C++的一个临时变量的问题，临时变量产生条件：当实参与引用参数不匹配，C++将产生临时变量。也就是说引用传参的本来目的，改变传入变量的值会失效，而变成使用临时变量，相当于引用参数是const引用。
-
-什么时候创建临时变量呢？
-&lt;!--more--&gt;
-1. 实参的类型正确，但不是左值；（x+10或7.0）;
-2. 实参的类型不正确，但可以转换为正确的类型；
-</code></pre><h6 id="u6240_u4EE5_u7EFC_u4E0A_u6240_u8FF0_uFF0C_u5BF9_u4E8E_u5F15_u7528_u53C2_u6570_u58F0_u660E_u6211_u4EEC_u8981_u5C3D_u53EF_u80FD_u5730_u4F7F_u7528const"><a href="#u6240_u4EE5_u7EFC_u4E0A_u6240_u8FF0_uFF0C_u5BF9_u4E8E_u5F15_u7528_u53C2_u6570_u58F0_u660E_u6211_u4EEC_u8981_u5C3D_u53EF_u80FD_u5730_u4F7F_u7528const" class="headerlink" title="所以综上所述，对于引用参数声明我们要尽可能地使用const"></a>所以综上所述，对于引用参数声明我们要尽可能地使用const</h6><p>   在这里顺便提一下C++11的新引用 ——右值引用（&amp;&amp;）！</p>
+        <p>  左值是指可被引用的数据对象(就是说有变量名，可用地址访问)，如变量(常规变量和const变量)、数组无素、结构成员、引用和解除引用的指针。</p>
+<p>  非左值包括字面常量（”Hello World!”由地址表示除外）和包含多项表达式：</p>
+  <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x + <span class="number">3</span> = <span class="number">5.0</span>;  <span class="comment">//It's wrong</span></span><br></pre></td></tr></table></figure>
+<p>  左右值最常出现的地方是什么呢？<br>  这要涉及到C++的一个临时变量的问题，临时变量产生条件：当实参与引用参数不匹配，C++将产生临时变量。也就是说引用传参的本来目的，改变传入变量的值会失效，而变成使用临时变量，相当于引用参数是const引用。</p>
+<p>  什么时候创建临时变量呢？</p>
+<ol>
+<li>实参的类型正确，但不是左值；（x+10或7.0）;</li>
+<li>实参的类型不正确，但可以转换为正确的类型；</li>
+</ol>
+<h6 id="u6240_u4EE5_u7EFC_u4E0A_u6240_u8FF0_uFF0C_u5BF9_u4E8E_u5F15_u7528_u53C2_u6570_u58F0_u660E_u6211_u4EEC_u8981_u5C3D_u53EF_u80FD_u5730_u4F7F_u7528const"><a href="#u6240_u4EE5_u7EFC_u4E0A_u6240_u8FF0_uFF0C_u5BF9_u4E8E_u5F15_u7528_u53C2_u6570_u58F0_u660E_u6211_u4EEC_u8981_u5C3D_u53EF_u80FD_u5730_u4F7F_u7528const" class="headerlink" title="所以综上所述，对于引用参数声明我们要尽可能地使用const"></a>所以综上所述，对于引用参数声明我们要尽可能地使用const</h6><p>   在这里顺便提一下C++11的新引用 ——右值引用（&amp;&amp;）！</p>
 <p>   来段实例代码：</p>
    <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">double</span> &amp;&amp; rref = <span class="built_in">std</span>::<span class="built_in">sqrt</span>(<span class="number">36.00</span>);   <span class="comment">//右值不能用 double&amp;</span></span><br><span class="line"><span class="keyword">double</span> j = <span class="number">15.0</span>;</span><br><span class="line"><span class="keyword">double</span> &amp;&amp; jref = <span class="number">2.0</span> * j + <span class="number">18.5</span>;    <span class="comment">//右值不能用 double&amp;</span></span><br></pre></td></tr></table></figure>
 
