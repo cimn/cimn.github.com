@@ -4,17 +4,18 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Archives: 2016 | Cimn&#39;s blog</title>
+  <title>cocos2d-js的JSON文件读取(Native) | Cimn&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Record someting that I&apos;v learn">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Cimn's blog">
-<meta property="og:url" content="http://yoursite.com/archives/2016/index.html">
+  <meta name="description" content="直接上个例子吧！就是这么直接~~~=……=  json中的内容：1234567&amp;#123;  loadingtips_1:&quot;---tips1---&quot;,  loadingtips_2:&quot;---tips2---&quot;,  loadingtips_3:&quot;---tips3---&quot;,  loadingtips_4:&quot;---tips4---&quot;,  loadingtips_5:&quot;---tips5---&quot;&amp;#125;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="cocos2d-js的JSON文件读取(Native)">
+<meta property="og:url" content="http://yoursite.com/2016/10/27/post-12/index.html">
 <meta property="og:site_name" content="Cimn's blog">
-<meta property="og:description" content="Record someting that I&apos;v learn">
+<meta property="og:description" content="直接上个例子吧！就是这么直接~~~=……=  json中的内容：1234567&amp;#123;  loadingtips_1:&quot;---tips1---&quot;,  loadingtips_2:&quot;---tips2---&quot;,  loadingtips_3:&quot;---tips3---&quot;,  loadingtips_4:&quot;---tips4---&quot;,  loadingtips_5:&quot;---tips5---&quot;&amp;#125;">
+<meta property="og:updated_time" content="2016-10-27T14:22:18.644Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Cimn's blog">
-<meta name="twitter:description" content="Record someting that I&apos;v learn">
+<meta name="twitter:title" content="cocos2d-js的JSON文件读取(Native)">
+<meta name="twitter:description" content="直接上个例子吧！就是这么直接~~~=……=  json中的内容：1234567&amp;#123;  loadingtips_1:&quot;---tips1---&quot;,  loadingtips_2:&quot;---tips2---&quot;,  loadingtips_3:&quot;---tips3---&quot;,  loadingtips_4:&quot;---tips4---&quot;,  loadingtips_5:&quot;---tips5---&quot;&amp;#125;">
   
     <link rel="alternative" href="/atom.xml" title="Cimn&#39;s blog" type="application/atom+xml">
   
@@ -192,212 +193,93 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-post-12" class="article article-type-post" itemscope itemprop="blogPost">
   
+    <div class="article-meta">
+      <a href="/2016/10/27/post-12/" class="article-date">
+  	<time datetime="2016-10-27T14:08:28.000Z" itemprop="datePublished">2016-10-27</time>
+</a>
+    </div>
   
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      cocos2d-js的JSON文件读取(Native)
+    </h1>
+  
+
+      </header>
       
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cocos2d-js/">cocos2d-js</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/10/27/post-12/" class="archive-article-date">
-  	<time datetime="2016-10-27T14:08:28.000Z" itemprop="datePublished">Oct 27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/10/27/post-12/">cocos2d-js的JSON文件读取(Native)</a>
-    </h1>
-  
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>  直接上个例子吧！就是这么直接~~~=……=<br>  json中的内容：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  loadingtips_1:<span class="string">"---tips1---"</span>,</span><br><span class="line">  loadingtips_2:<span class="string">"---tips2---"</span>,</span><br><span class="line">  loadingtips_3:<span class="string">"---tips3---"</span>,</span><br><span class="line">  loadingtips_4:<span class="string">"---tips4---"</span>,</span><br><span class="line">  loadingtips_5:<span class="string">"---tips5---"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<p>  json文件载入：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> TransJson = cc.Class.extend(&#123;</span><br><span class="line">json_file: <span class="literal">null</span>,</span><br><span class="line">ctor:</span><br><span class="line">cc.loader.loadJson(<span class="string">"res/local.zh.json"</span>);</span><br><span class="line">json_file = data;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<p>   json文件读取：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> readJson = <span class="function"><span class="keyword">function</span>(<span class="params">key</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(TransJson.json_file==<span class="literal">null</span>) &#123;</span><br><span class="line">       TODO</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> TransJson.json_file[key];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>   使用例子(加载界面随机tips)：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> tips = readJson(<span class="string">"loadingtips_"</span> + (<span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * <span class="number">5</span>)).toString());</span><br><span class="line"><span class="comment">//Math的使用跟其它引擎基本一致！</span></span><br></pre></td></tr></table></figure></p>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cocos2d-js/">cocos2d-js</a></li></ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    
   </div>
-</article>
   
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/09/11/post-11/" class="archive-article-date">
-  	<time datetime="2016-09-11T02:52:49.000Z" itemprop="datePublished">Sep 11</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/09/11/post-11/">C/C++的左值和右值与其应用</a>
-    </h1>
   
+    <a href="/2016/09/11/post-11/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">C/C++的左值和右值与其应用</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C++</a></li></ul>
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
 	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/07/08/post-10/" class="archive-article-date">
-  	<time datetime="2016-07-07T16:47:14.000Z" itemprop="datePublished">Jul 8</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/07/08/post-10/">如何去掉cocos code ide调试框菜单栏</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cocos2d-js/">cocos2d-js</a></li></ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/06/13/post-9/" class="archive-article-date">
-  	<time datetime="2016-06-12T16:38:18.000Z" itemprop="datePublished">Jun 13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/06/13/post-9/">android平台上使用js直接调用Java</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cocos2d-js/">cocos2d-js</a></li></ul>
-	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/06/01/post-8/" class="archive-article-date">
-  	<time datetime="2016-05-31T16:39:47.000Z" itemprop="datePublished">Jun 1</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/06/01/post-8/">小说客户端XMLHttpRequest对象</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cocos2d-js/">cocos2d-js</a></li></ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/05/27/post-7/" class="archive-article-date">
-  	<time datetime="2016-05-26T17:42:04.000Z" itemprop="datePublished">May 27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/05/27/post-7/">squence实现间隔时间不同对象相同动作的实现方法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cocos2d-js/">cocos2d-js</a></li></ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2016/page/2/">2</a><a class="page-number" href="/archives/2016/page/3/">3</a><a class="extend next" rel="next" href="/archives/2016/page/2/">Next &raquo;</a>
-    </nav>
-  
 
 </div>
       <footer id="footer">
@@ -423,8 +305,8 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false

@@ -194,6 +194,66 @@
 
       <div class="body-wrap">
   
+    <article id="post-post-12" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/27/post-12/" class="article-date">
+  	<time datetime="2016-10-27T14:08:28.000Z" itemprop="datePublished">2016-10-27</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/27/post-12/">cocos2d-js的JSON文件读取(Native)</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>  直接上个例子吧！就是这么直接~~~=……=<br>  json中的内容：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  loadingtips_1:<span class="string">"---tips1---"</span>,</span><br><span class="line">  loadingtips_2:<span class="string">"---tips2---"</span>,</span><br><span class="line">  loadingtips_3:<span class="string">"---tips3---"</span>,</span><br><span class="line">  loadingtips_4:<span class="string">"---tips4---"</span>,</span><br><span class="line">  loadingtips_5:<span class="string">"---tips5---"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cocos2d-js/">cocos2d-js</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2016/10/27/post-12/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-post-11" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -514,83 +574,9 @@
 
 
   
-    <article id="post-post-6" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/04/23/post-6/" class="article-date">
-  	<time datetime="2016-04-22T16:53:26.000Z" itemprop="datePublished">2016-04-23</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/04/23/post-6/">C++指针小结</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ol>
-<li>对每个指针变量名，都需要一个<code>*</code>（间接值或解除引用运算符）。</li>
-<li><h2 id="*_u8FD0_u7B97_u7B26_u4E24_u8FB9_u7684_u7A7A_u683C_u662F_u53EF_u4EE5_u9009_u7684_u3002"><a href="#*_u8FD0_u7B97_u7B26_u4E24_u8FB9_u7684_u7A7A_u683C_u662F_u53EF_u4EE5_u9009_u7684_u3002" class="headerlink" title="*运算符两边的空格是可以选的。"></a><code>*</code>运算符两边的空格是可以选的。</h2><ul>
-<li><p>C程序使用格式:</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> *ptr;  <span class="comment">//这里强调*ptr是一个int类型的值</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>C++程序使用格式:</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>* ptr;  <span class="comment">//这里强调int*是一个类型————指向int的指针</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<hr>
-<h5 id="u6CE8_u610F_uFF1A_u5728C++_u4E2D_uFF0Cint*_u662F_u4E00_u79CD_u590D_u5408_u7C7B_u578B_uFF0C_u662F_u6307_u5411int_u7684_u6307_u9488_u3002"><a href="#u6CE8_u610F_uFF1A_u5728C++_u4E2D_uFF0Cint*_u662F_u4E00_u79CD_u590D_u5408_u7C7B_u578B_uFF0C_u662F_u6307_u5411int_u7684_u6307_u9488_u3002" class="headerlink" title="注意：在C++中，int*是一种复合类型，是指向int的指针。"></a>注意：在C++中，int*是一种复合类型，是指向int的指针。</h5></li>
-<li><p>一定要在对指针应用解除引用运算符（*）之前，将指针初始化，要不就会成为一个不确定的野指针。</p>
-</li>
-<li><p>指针不是整型，指针和整数是两个截然不同的类型，不允许直接像C一样直接赋于没有声明的整数内存地址；</p>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C++</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/04/23/post-6/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 </div>
